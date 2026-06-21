@@ -7,37 +7,37 @@
 ## Pages
 
 ### בית
-https://-3b80aea9.zappy5.app
+https://example.com
 מחפשים קלנועית לקשישים עם ליווי צמוד? בסאמסקוטר תקבלו ייעוץ מקצועי, התאמה אישית ושירות עד הבית. מאות לקוחות מרוצים כבר נוסעים בביטחון. התחילו עוד היום!
 
 ### מוצרים
-https://-3b80aea9.zappy5.app/products
+https://example.com/products
 מגוון קלנועיות חשמליות לניידות מוגבלת: מדגם G1 ועד דגם דו-מושבי יוקרתי. בואו לאולם התצוגה או נגיע אליכם לייעוץ מקצועי ונסיעת מבחן ללא התחייבות.
 
 ### אודות
-https://-3b80aea9.zappy5.app/about
+https://example.com/about
 סאמסקוטר קמה כדי להחזיר את החופש לנוע. אנחנו מתמחים בייעוץ מקצועי והתאמת קלנועית לקשישים, בליווי אישי מהפגישה הראשונה ועד שירות עד הבית לכל החיים.
 
 ### צור קשר
-https://-3b80aea9.zappy5.app/contact
+https://example.com/contact
 צריכים קלנועית חשמלית לבעלי מוגבלות? השאירו פרטים ונחזור עם ייעוץ מקצועי עד הבית. נעזור לכם לבחור את הדגם המושלם, כולל אפשרויות מימון משתלמות.
 
 ### תודה רבה - סאמסקוטר
-https://-3b80aea9.zappy5.app/thank-you
+https://example.com/thank-you
 תודה על פנייתך לסאמסקוטר. הודעתך התקבלה בהצלחה ונחזור אליך בהקדם עם ייעוץ מקצועי ושירות עד הבית.
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://-3b80aea9.zappy5.app/privacy
+https://example.com/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://-3b80aea9.zappy5.app/terms
+https://example.com/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://-3b80aea9.zappy5.app/accessibility
+https://example.com/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
@@ -47,8 +47,8 @@ Information about WCAG compliance and accessibility features.
 - (No contact details configured yet.)
 
 ### Contact form
-- URL: https://-3b80aea9.zappy5.app/contact
-- Endpoint: https://-3b80aea9.zappy5.app/api/email/contact-form
+- URL: https://example.com/contact
+- Endpoint: https://example.com/api/email/contact-form
 - Method: POST
 - Content-Type: application/json
 - Fields:
@@ -78,6 +78,6 @@ Mobility Solutions / Scooters
 
 # Machine-readable feeds
 
-- Sitemap (XML): https://-3b80aea9.zappy5.app/sitemap.xml
-- Robots: https://-3b80aea9.zappy5.app/robots.txt
-- Flattened page text (for LLMs): https://-3b80aea9.zappy5.app/llms-full.txt
+- Sitemap (XML): https://example.com/sitemap.xml
+- Robots: https://example.com/robots.txt
+- Flattened page text (for LLMs): https://example.com/llms-full.txt

@@ -1,0 +1,83 @@
+# סאמסקוטר — Generative Engine Optimization Map
+
+> SamScooter is a leading Israeli company specializing in the import, marketing, and personalized fitting of high-quality mobility scooters for private customers, seniors, and individuals with special needs. The brand centers around values of independence, safety, and comfort in daily life, offering a wide range of models from foldable and dual-seat scooters to premium advanced models. What sets SamScooter apart is its deeply personal service philosophy — accompanying each customer from initial consultation through their first ride and beyond, including home delivery and ongoing post-purchase support. The showroom is located in Bustan HaGalil, serving customers nationwide.
+
+---
+
+## Pages
+
+### בית
+https://-3b80aea9.zappy5.app
+מחפשים קלנועית לקשישים עם ליווי צמוד? בסאמסקוטר תקבלו ייעוץ מקצועי, התאמה אישית ושירות עד הבית. מאות לקוחות מרוצים כבר נוסעים בביטחון. התחילו עוד היום!
+
+### מוצרים
+https://-3b80aea9.zappy5.app/products
+מגוון קלנועיות חשמליות לניידות מוגבלת: מדגם G1 ועד דגם דו-מושבי יוקרתי. בואו לאולם התצוגה או נגיע אליכם לייעוץ מקצועי ונסיעת מבחן ללא התחייבות.
+
+### אודות
+https://-3b80aea9.zappy5.app/about
+סאמסקוטר קמה כדי להחזיר את החופש לנוע. אנחנו מתמחים בייעוץ מקצועי והתאמת קלנועית לקשישים, בליווי אישי מהפגישה הראשונה ועד שירות עד הבית לכל החיים.
+
+### צור קשר
+https://-3b80aea9.zappy5.app/contact
+צריכים קלנועית חשמלית לבעלי מוגבלות? השאירו פרטים ונחזור עם ייעוץ מקצועי עד הבית. נעזור לכם לבחור את הדגם המושלם, כולל אפשרויות מימון משתלמות.
+
+### תודה רבה - סאמסקוטר
+https://-3b80aea9.zappy5.app/thank-you
+תודה על פנייתך לסאמסקוטר. הודעתך התקבלה בהצלחה ונחזור אליך בהקדם עם ייעוץ מקצועי ושירות עד הבית.
+
+## Legal & Policy
+
+### Privacy Policy
+https://-3b80aea9.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://-3b80aea9.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://-3b80aea9.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+## How to Contact Us
+
+- (No contact details configured yet.)
+
+### Contact form
+- URL: https://-3b80aea9.zappy5.app/contact
+- Endpoint: https://-3b80aea9.zappy5.app/api/email/contact-form
+- Method: POST
+- Content-Type: application/json
+- Fields:
+  - `name` (text)
+  - `email` (email)
+  - `phone` (tel)
+  - `message` (textarea)
+  - `privacy_consent` (checkbox)
+
+---
+
+# Business Context (for LLM understanding)
+
+## About סאמסקוטר
+SamScooter is a leading Israeli company specializing in the import, marketing, and personalized fitting of high-quality mobility scooters for private customers, seniors, and individuals with special needs. The brand centers around values of independence, safety, and comfort in daily life, offering a wide range of models from foldable and dual-seat scooters to premium advanced models. What sets SamScooter apart is its deeply personal service philosophy — accompanying each customer from initial consultation through their first ride and beyond, including home delivery and ongoing post-purchase support. The showroom is located in Bustan HaGalil, serving customers nationwide.
+
+## Target Audience
+- לקוחות פרטיים, מבוגרים ובעלי צרכים שונים המחפשים עצמאות, נוחות וביטחון
+- מחפשי עצמאות בקרב מבוגרים
+- בעלי מוגבלויות ופגועי ניידות
+- מטפלים ובני משפחה דואגים
+
+## Industry
+Mobility Solutions / Scooters
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://-3b80aea9.zappy5.app/sitemap.xml
+- Robots: https://-3b80aea9.zappy5.app/robots.txt
+- Flattened page text (for LLMs): https://-3b80aea9.zappy5.app/llms-full.txt

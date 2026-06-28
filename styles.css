@@ -7673,6 +7673,101 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
     padding: 5px 12px;
   }
 }
+
+@media (max-width: 768px) {
+.home-registration-section {
+  padding: 72px 12px 48px !important;
+}
+
+.home-registration-section__headline {
+  font-size: 1.65rem !important;
+  padding: 0 !important;
+}
+
+.home-registration-section__subtitle {
+  font-size: 0.9rem !important;
+  padding: 0 4px !important;
+}
+
+.home-registration-section__content-grid {
+  grid-template-columns: 1fr !important;
+  gap: 24px !important;
+}
+
+.home-registration-section__form-card {
+  padding: 20px 14px !important;
+  border-radius: 14px !important;
+  margin: 0 !important;
+  box-shadow: 0 4px 16px rgba(155, 28, 28, 0.1) !important;
+}
+
+.home-registration-section__form-title {
+  font-size: 1.3rem !important;
+  margin-bottom: 6px !important;
+}
+
+.home-registration-section__form-subtitle {
+  font-size: 0.85rem !important;
+}
+
+.home-registration-section__form-input {
+  padding: 12px 12px !important;
+  font-size: 0.95rem !important;
+}
+
+.home-registration-section__form-label {
+  font-size: 0.8rem !important;
+}
+
+.home-registration-section__submit-btn {
+  padding: 14px 24px !important;
+  font-size: 1rem !important;
+}
+
+.home-registration-section__privacy-consent-label {
+  font-size: 0.78rem !important;
+}
+
+.home-registration-section__visual-column {
+  gap: 20px !important;
+}
+
+.home-registration-section__trust-badges {
+  grid-template-columns: 1fr 1fr 1fr !important;
+  gap: 8px !important;
+}
+
+.home-registration-section__trust-badge {
+  padding: 10px 6px !important;
+  font-size: 0.72rem !important;
+  border-radius: 10px !important;
+}
+
+.home-registration-section__trust-badge svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.home-registration-section__feature-item {
+  padding: 12px 12px !important;
+  gap: 8px !important;
+}
+
+.home-registration-section__feature-item span {
+  font-size: 0.88rem !important;
+}
+
+.home-registration-section__image-badge {
+  bottom: 6px !important;
+  inset-inline-start: 6px !important;
+  padding: 5px 10px !important;
+  font-size: 0.72rem !important;
+}
+
+.home-registration-section__contact-form {
+  gap: 16px !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

@@ -7684,52 +7684,6 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 }
 /* /Zappy custom logo size */
 
-
-.navbar .logo {
-  width: 175px !important;
-  height: auto !important;
-  max-width: 175px !important;
-}
-/* zappy-self-heal */
-.navbar .logo { width: 175px !important; }
-.navbar .logo { height: auto !important; }
-
-/* zappy-self-heal */
-html body .navbar .logo { width: 175px !important; }
-html body .navbar .logo { height: auto !important; }
-
-
-@media (max-width: 768px) {
-.navbar .logo {
-  width: 220px !important;
-  max-width: 90vw !important;
-  height: auto !important;
-}
-}
-/* zappy-self-heal */
-.navbar .logo { width: 220px !important; }
-.navbar .logo { max-width: 90vw !important; }
-.navbar .logo { height: auto !important; }
-
-/* zappy-self-heal */
-html body .navbar .logo { width: 220px !important; }
-html body .navbar .logo { max-width: 90vw !important; }
-html body .navbar .logo { height: auto !important; }
-
-
-html body .navbar .logo {
-  width: 220px !important;
-  height: auto !important;
-  max-width: 90vw !important;
-}
-/* zappy-self-heal */
-html body .navbar .logo { width: 220px !important; }
-html body .navbar .logo { height: auto !important; }
-
-/* zappy-self-heal */
-html body html body .navbar .logo { width: 220px !important; }
-html body html body .navbar .logo { height: auto !important; }
-
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

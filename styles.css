@@ -7939,6 +7939,95 @@ html body .home-registration-section .home-registration-section__trust-badges { 
 html body .home-registration-section .home-registration-section__trust-badge { width: auto !important; }
 html body .home-registration-section .home-registration-section__trust-badge svg { height: 12px !important; }
 
+
+@media (max-width: 768px) {
+.home-registration-section .home-registration-section__feature-list {
+  gap: 8px !important;
+  padding: 0 !important;
+}
+
+.home-registration-section .home-registration-section__feature-item {
+  padding: 12px 10px !important;
+  gap: 8px !important;
+  border-radius: 10px !important;
+}
+
+.home-registration-section .home-registration-section__feature-item span {
+  font-size: 0.85rem !important;
+  line-height: 1.4 !important;
+}
+
+.home-registration-section .home-registration-section__feature-item svg {
+  width: 18px !important;
+  height: 18px !important;
+  flex-shrink: 0 !important;
+  margin-top: 2px !important;
+}
+
+.home-registration-section .home-registration-section__image-badge {
+  bottom: 4px !important;
+  inset-inline-start: 4px !important;
+  padding: 4px 8px !important;
+  font-size: 0.68rem !important;
+  border-radius: 6px !important;
+  flex-direction: row !important;
+}
+
+.home-registration-section .home-registration-section__badge-stars {
+  font-size: 0.62rem !important;
+  letter-spacing: 1px !important;
+}
+
+.home-registration-section .home-registration-section__image-wrapper {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+.home-registration-section .home-registration-section__form-card {
+  padding: 20px 14px !important;
+}
+
+.home-registration-section .home-registration-section__form-input {
+  padding: 11px 10px !important;
+  font-size: 0.9rem !important;
+}
+
+.home-registration-section .home-registration-section__form-label span {
+  font-size: 0.8rem !important;
+}
+
+.home-registration-section .home-registration-section__form-label svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.home-registration-section .home-registration-section__privacy-consent-label {
+  font-size: 0.75rem !important;
+  gap: 6px !important;
+}
+
+.home-registration-section .home-registration-section__privacy-consent-checkbox {
+  width: 16px !important;
+  height: 16px !important;
+  flex-shrink: 0 !important;
+}
+
+.home-registration-section .home-registration-section__submit-btn {
+  padding: 13px 24px !important;
+  font-size: 1rem !important;
+  border-radius: 10px !important;
+}
+}
+/* zappy-self-heal */
+.home-registration-section .home-registration-section__feature-item span { line-height: 1.4 !important; }
+.home-registration-section .home-registration-section__feature-item svg { width: 18px !important; }
+.home-registration-section .home-registration-section__feature-item svg { height: 18px !important; }
+
+/* zappy-self-heal */
+html body .home-registration-section .home-registration-section__feature-item span { line-height: 1.4 !important; }
+html body .home-registration-section .home-registration-section__feature-item svg { width: 18px !important; }
+html body .home-registration-section .home-registration-section__feature-item svg { height: 18px !important; }
+
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

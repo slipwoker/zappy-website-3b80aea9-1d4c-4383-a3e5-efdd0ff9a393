@@ -50,15 +50,13 @@ Information about WCAG compliance and accessibility features.
 - Address: דרך הגנים 60, בוסתן הגליל, IL
 
 ### Contact form
-- URL: https://example.com/contact
+- URL: https://example.com
 - Endpoint: https://example.com/api/email/contact-form
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text, required)
-  - `email` (email, required)
+  - `full_name` (text, required)
   - `phone` (tel, required)
-  - `message` (textarea, required)
   - `privacy_consent` (checkbox, required)
 
 ---

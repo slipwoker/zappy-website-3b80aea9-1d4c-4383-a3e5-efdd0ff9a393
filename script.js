@@ -1420,6 +1420,81 @@ window.onload = function() {
 })();
 
 
+/* Added Component Script */
+<script>
+  (function() {
+    const form = document.querySelector('.registration-form');
+    const phoneInput = document.getElementById('phone-number');
+    
+    // Auto-format phone number (Israeli format)
+    phoneInput.addEventListener('input', function(e) {
+      let value = e.target.value.replace(/[^\d]/g, '');
+      if (value.length > 10) value = value.slice(0, 10);
+      
+      if (value.length > 3 && value.length <= 6) {
+        value = value.slice(0, 3) + '-' + value.slice(3);
+      } else if (value.length > 6) {
+        value = value.slice(0, 3) + '-' + value.slice(3, 6) + '-' + value.slice(6);
+      }
+      
+      e.target.value = value;
+    });
+    
+    // Form submission
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const nameInput = document.getElementById('full-name');
+      const phoneVal = phoneInput.value.replace(/[^\d]/g, '');
+      let isValid = true;
+      
+      // Validate name
+      if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
+        nameInput.setCustomValidity('invalid');
+        nameInput.reportValidity();
+        isValid = false;
+      } else {
+        nameInput.setCustomValidity('');
+      }
+      
+      // Validate phone
+      if (phoneVal.length < 9 || phoneVal.length > 10) {
+        phoneInput.setCustomValidity('invalid');
+        phoneInput.reportValidity();
+        isValid = false;
+      } else {
+        phoneInput.setCustomValidity('');
+      }
+      
+      if (isValid) {
+        // Success state
+        const btn = form.querySelector('.form-submit-btn');
+        const originalHTML = btn.innerHTML;
+        btn.innerHTML = '<span>נשלח בהצלחה!</span><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>';
+        btn.style.background = 'linear-gradient(135deg, #16a34a, #22c55e)';
+        btn.style.boxShadow = '0 6px 20px rgba(22, 163, 74, 0.3)';
+        btn.disabled = true;
+        
+        // Reset after delay
+        setTimeout(() => {
+          btn.innerHTML = originalHTML;
+          btn.style.background = '';
+          btn.style.boxShadow = '';
+          btn.disabled = false;
+          form.reset();
+        }, 3000);
+        
+        // Here you would normally send the data to a server
+        console.log('Form submitted:', {
+          name: nameInput.value.trim(),
+          phone: phoneVal
+        });
+      }
+    });
+  })();
+</script>
+
+
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
   try {

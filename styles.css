@@ -6827,6 +6827,41 @@ html body .thankyou-section .thankyou-main-image { height: auto !important; }
 html body .thankyou-section .thankyou-icon-wrapper { width: auto !important; }
 html body .thankyou-section .thankyou-icon-wrapper { height: auto !important; }
 
+
+.thankyou-section .thankyou-icon-wrapper {
+  width: auto;
+  height: auto;
+  background: none;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.thankyou-section .thankyou-icon-wrapper img {
+  width: 3024px;
+  height: 4032px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 3024 / 4032;
+  border-radius: 16px;
+  display: block;
+  object-fit: contain;
+  margin: 0 auto;
+}
+/* zappy-self-heal */
+.thankyou-section .thankyou-icon-wrapper { width: auto !important; }
+.thankyou-section .thankyou-icon-wrapper { height: auto !important; }
+.thankyou-section .thankyou-icon-wrapper img { width: 3024px !important; }
+.thankyou-section .thankyou-icon-wrapper img { height: 4032px !important; }
+.thankyou-section .thankyou-icon-wrapper img { height: 4032px !important; }
+
+/* zappy-self-heal */
+html body .thankyou-section .thankyou-icon-wrapper { width: auto !important; }
+html body .thankyou-section .thankyou-icon-wrapper { height: auto !important; }
+html body .thankyou-section .thankyou-icon-wrapper img { width: 3024px !important; }
+html body .thankyou-section .thankyou-icon-wrapper img { height: 4032px !important; }
+html body .thankyou-section .thankyou-icon-wrapper img { height: 4032px !important; }
+
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

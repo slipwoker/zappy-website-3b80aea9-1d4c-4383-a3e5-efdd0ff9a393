@@ -6796,6 +6796,37 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
     font-size: 0.95rem;
   }
 }
+
+.thankyou-section .thankyou-main-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.thankyou-section .thankyou-icon-wrapper {
+  width: auto;
+  height: auto;
+  background: none;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 24px;
+}
+/* zappy-self-heal */
+.thankyou-section .thankyou-main-image { width: 100% !important; }
+.thankyou-section .thankyou-main-image { height: auto !important; }
+.thankyou-section .thankyou-icon-wrapper { width: auto !important; }
+.thankyou-section .thankyou-icon-wrapper { height: auto !important; }
+
+/* zappy-self-heal */
+html body .thankyou-section .thankyou-main-image { width: 100% !important; }
+html body .thankyou-section .thankyou-main-image { height: auto !important; }
+html body .thankyou-section .thankyou-icon-wrapper { width: auto !important; }
+html body .thankyou-section .thankyou-icon-wrapper { height: auto !important; }
+
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

@@ -1421,7 +1421,7 @@ window.onload = function() {
 
 
 /* Added Component Script */
-<script>
+
   (function() {
     const form = document.querySelector('.registration-form');
     const phoneInput = document.getElementById('phone-number');
@@ -1492,7 +1492,6 @@ window.onload = function() {
       }
     });
   })();
-</script>
 
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */

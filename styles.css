@@ -2647,7 +2647,7 @@ main { flex: 1 0 auto; }
 .index-products-section {
   background-color: #ffffff;
   color: var(--text-dark);
-  padding: 60px 20px;
+  padding: 60px 20px !important;
   direction: rtl;
   position: relative;
   overflow: visible;

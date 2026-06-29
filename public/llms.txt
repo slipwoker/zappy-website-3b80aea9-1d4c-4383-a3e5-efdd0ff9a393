@@ -7,37 +7,37 @@
 ## Pages
 
 ### בית
-https://example.com
+https://samskooter.zappy5.app
 מחפשים קלנועית לקשישים עם ליווי צמוד? בסאמסקוטר תקבלו ייעוץ מקצועי, התאמה אישית ושירות עד הבית. מאות לקוחות מרוצים כבר נוסעים בביטחון. התחילו עוד היום!
 
 ### מוצרים
-https://example.com/products
+https://samskooter.zappy5.app/products
 מגוון קלנועיות חשמליות לניידות מוגבלת: מדגם G1 ועד דגם דו-מושבי יוקרתי. בואו לאולם התצוגה או נגיע אליכם לייעוץ מקצועי ונסיעת מבחן ללא התחייבות.
 
 ### אודות
-https://example.com/about
+https://samskooter.zappy5.app/about
 סאמסקוטר קמה כדי להחזיר את החופש לנוע. אנחנו מתמחים בייעוץ מקצועי והתאמת קלנועית לקשישים, בליווי אישי מהפגישה הראשונה ועד שירות עד הבית לכל החיים.
 
 ### צור קשר
-https://example.com/contact
+https://samskooter.zappy5.app/contact
 צריכים קלנועית חשמלית לבעלי מוגבלות? השאירו פרטים ונחזור עם ייעוץ מקצועי עד הבית. נעזור לכם לבחור את הדגם המושלם, כולל אפשרויות מימון משתלמות.
 
 ### תודה רבה - סאמסקוטר
-https://example.com/thank-you
+https://samskooter.zappy5.app/thank-you
 תודה על פנייתך לסאמסקוטר. הודעתך התקבלה בהצלחה ונחזור אליך בהקדם עם ייעוץ מקצועי ושירות עד הבית.
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://example.com/privacy
+https://samskooter.zappy5.app/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://example.com/terms
+https://samskooter.zappy5.app/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://example.com/accessibility
+https://samskooter.zappy5.app/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
@@ -50,8 +50,8 @@ Information about WCAG compliance and accessibility features.
 - Address: דרך הגנים 60, בוסתן הגליל, IL
 
 ### Contact form
-- URL: https://example.com
-- Endpoint: https://example.com/api/email/contact-form
+- URL: https://samskooter.zappy5.app
+- Endpoint: https://samskooter.zappy5.app/api/email/contact-form
 - Method: POST
 - Content-Type: application/json
 - Fields:
@@ -79,6 +79,6 @@ Mobility Solutions / Scooters
 
 # Machine-readable feeds
 
-- Sitemap (XML): https://example.com/sitemap.xml
-- Robots: https://example.com/robots.txt
-- Flattened page text (for LLMs): https://example.com/llms-full.txt
+- Sitemap (XML): https://samskooter.zappy5.app/sitemap.xml
+- Robots: https://samskooter.zappy5.app/robots.txt
+- Flattened page text (for LLMs): https://samskooter.zappy5.app/llms-full.txt

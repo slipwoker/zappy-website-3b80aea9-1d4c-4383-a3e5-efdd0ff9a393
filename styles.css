@@ -7669,20 +7669,7 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 }
 
 
-/* Zappy custom logo size (desktop only — mobile stays at 110px/35px) */
-@media (min-width: 769px) {
-  .logo, img.logo, .logo img, .logo-link img, .nav-brand img {
-    max-height: none !important;
-    height: 70px !important;
-    max-width: 280px !important;
-    width: auto !important;
-    object-fit: contain !important;
-  }
-  .nav-container {
-    min-height: 100px !important;
-  }
-}
-/* /Zappy custom logo size */
+
 
 
 .site-footer ~ div[data-integration="accessibility\:toolbar"],
@@ -7772,6 +7759,21 @@ html, body {
 /* zappy-self-heal */
 html body .index-benefits-section .benefits-grid { grid-template-columns: 1fr !important; }
 html body .index-products-section .index-products-section__grid { grid-template-columns: 1fr !important; }
+
+/* Zappy custom logo size (desktop only — mobile stays at 110px/35px) */
+@media (min-width: 769px) {
+  .logo, img.logo, .logo img, .logo-link img, .nav-brand img {
+    max-height: 40px !important;
+    height: auto !important;
+    max-width: 160px !important;
+    width: auto !important;
+    object-fit: contain !important;
+  }
+  .nav-container {
+    min-height: 70px !important;
+  }
+}
+/* /Zappy custom logo size */
 
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {

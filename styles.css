@@ -2644,11 +2644,10 @@ main { flex: 1 0 auto; }
   }
 }
 
-/* products */
 .index-products-section {
   background-color: #ffffff;
   color: var(--text-dark);
-  padding: 100px 20px;
+  padding: 60px 20px;
   direction: rtl;
   position: relative;
   overflow: visible;
@@ -2659,24 +2658,23 @@ main { flex: 1 0 auto; }
   margin: 0 auto;
 }
 
-/* Header */
 .index-products-section__header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 
 .index-products-section__title {
   font-family: 'Rubik', sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--text-dark);
-  margin: 0 0 12px 0;
+  margin: 0 0 8px;
   line-height: 1.3;
 }
 
 .index-products-section__subtitle {
   font-family: 'Rubik', sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   color: var(--text-muted);
   max-width: 700px;
@@ -2684,11 +2682,10 @@ main { flex: 1 0 auto; }
   line-height: 1.7;
 }
 
-/* Grid */
 .index-products-section__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
+  gap: 16px;
   direction: rtl;
 }
 
@@ -2727,7 +2724,7 @@ main { flex: 1 0 auto; }
 }
 
 .index-products-section__card-body {
-  padding: 24px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -2736,20 +2733,20 @@ main { flex: 1 0 auto; }
 
 .index-products-section__card-title {
   font-family: 'Rubik', sans-serif;
-  font-size: 1.375rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--text-dark);
-  margin: 0 0 8px 0;
+  margin: 0 0 4px;
   line-height: 1.4;
 }
 
 .index-products-section__card-desc {
   font-family: 'Rubik', sans-serif;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 400;
   color: var(--text-muted);
-  line-height: 1.7;
-  margin: 0 0 24px 0;
+  line-height: 1.5;
+  margin: 0 0 16px;
   flex-grow: 1;
 }
 

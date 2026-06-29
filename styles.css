@@ -7689,6 +7689,90 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 .site-footer ~ div[data-integration="accessibility\:toolbar"] * {
   display: none !important;
 }
+
+@media (max-width: 768px) {
+html, body {
+  overflow-x: clip !important;
+}
+
+.index-benefits-section {
+  padding-top: 60px !important;
+  padding-bottom: 50px !important;
+}
+
+.index-benefits-section .benefits-grid {
+  grid-template-columns: 1fr !important;
+  gap: 20px !important;
+}
+
+.index-benefits-section .benefit-card {
+  padding: 24px !important;
+}
+
+.index-benefits-section .benefits-header h2 {
+  font-size: 1.75rem !important;
+}
+
+.index-products-section {
+  padding-top: 60px !important;
+  padding-bottom: 50px !important;
+}
+
+.index-products-section .index-products-section__grid {
+  grid-template-columns: 1fr !important;
+}
+
+.index-products-section .index-products-section__title {
+  font-size: 1.75rem !important;
+}
+
+.index-services-section {
+  padding-top: 60px !important;
+  padding-bottom: 50px !important;
+}
+
+.index-services-section .index-services-section__timeline {
+  grid-template-columns: 1fr !important;
+}
+
+.index-about-section {
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}
+
+.index-final-cta-section {
+  padding-top: 60px !important;
+  padding-bottom: 50px !important;
+}
+
+.index-final-cta-section .index-final-cta-heading {
+  font-size: 1.75rem !important;
+}
+
+.site-footer {
+  padding-top: 48px !important;
+  padding-bottom: 32px !important;
+}
+
+.site-footer .footer-grid {
+  grid-template-columns: 1fr !important;
+  gap: 32px !important;
+}
+
+.site-footer .footer-bottom {
+  flex-direction: column !important;
+  gap: 12px !important;
+  text-align: center !important;
+}
+}
+/* zappy-self-heal */
+.index-benefits-section .benefits-grid { grid-template-columns: 1fr !important; }
+.index-products-section .index-products-section__grid { grid-template-columns: 1fr !important; }
+
+/* zappy-self-heal */
+html body .index-benefits-section .benefits-grid { grid-template-columns: 1fr !important; }
+html body .index-products-section .index-products-section__grid { grid-template-columns: 1fr !important; }
+
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

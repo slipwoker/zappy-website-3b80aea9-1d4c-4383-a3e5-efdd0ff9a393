@@ -2213,8 +2213,8 @@ body { min-height: 100vh; display: flex; flex-direction: column; }
 main { flex: 1 0 auto; }
 .site-footer { flex-shrink: 0; }
 .index-hero-section {
-  background-color: var(--bg-dark);
-  color: var(--text-light);
+  background-color: #ffffff;
+  color: #9b1c1c;
   padding: 0;
   margin: 0;
   overflow: visible;
@@ -3049,10 +3049,9 @@ main { flex: 1 0 auto; }
     }
 }
 
-/* final-cta */
 .index-final-cta-section {
-  background: var(--bg-dark);
-  color: var(--text-light);
+  background: #ffffff;
+  color: #9b1c1c;
   padding: 100px 16px;
   position: relative;
   overflow: visible;
@@ -7777,6 +7776,36 @@ html body .index-products-section .index-products-section__grid {
   }
 }
 /* /Zappy custom logo size */
+
+
+:root {
+  --bg-dark: var(--background-color);
+  --bg-light: var(--background-color);
+  --background: var(--background-color);
+  --backgroundDark: var(--background-color);
+  --surface: #f9f4f4;
+  --text-dark: var(--primary-color);
+  --text-muted: var(--accent-color);
+  --text-light: var(--primary-color);
+  --nav-bg: var(--primary-color);
+  --nav-text: var(--background-color);
+  --nav-text-hover: #f5c6c6;
+}
+/* zappy-self-heal */
+:root { --bg-dark: var(--background-color) !important; }
+:root { --bg-light: var(--background-color) !important; }
+:root { --background: var(--background-color) !important; }
+:root { --backgroundDark: var(--background-color) !important; }
+:root { --surface: #f9f4f4 !important; }
+:root { --text-dark: var(--primary-color) !important; }
+
+/* zappy-self-heal */
+html body :root { --bg-dark: var(--background-color) !important; }
+html body :root { --bg-light: var(--background-color) !important; }
+html body :root { --background: var(--background-color) !important; }
+html body :root { --backgroundDark: var(--background-color) !important; }
+html body :root { --surface: #f9f4f4 !important; }
+html body :root { --text-dark: var(--primary-color) !important; }
 
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {

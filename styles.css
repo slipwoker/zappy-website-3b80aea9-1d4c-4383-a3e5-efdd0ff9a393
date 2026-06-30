@@ -8046,6 +8046,32 @@ html body :root { --text-dark: var(--primary-color) !important; }
 .index-benefits-section .benefit-card p {
   color: var(--primary-color) !important;
 }
+
+:root {
+  --bg-dark: var(--background-color);
+  --bg-light: var(--background-color);
+  --background: var(--background-color);
+  --backgroundDark: var(--background-color);
+  --text-dark: var(--primary-color);
+  --text-muted: #b54545;
+  --text-light: var(--primary-color);
+}
+/* zappy-self-heal */
+:root { --bg-dark: var(--background-color) !important; }
+:root { --bg-light: var(--background-color) !important; }
+:root { --background: var(--background-color) !important; }
+:root { --backgroundDark: var(--background-color) !important; }
+:root { --text-dark: var(--primary-color) !important; }
+:root { --text-muted: #b54545 !important; }
+
+/* zappy-self-heal */
+html body :root { --bg-dark: var(--background-color) !important; }
+html body :root { --bg-light: var(--background-color) !important; }
+html body :root { --background: var(--background-color) !important; }
+html body :root { --backgroundDark: var(--background-color) !important; }
+html body :root { --text-dark: var(--primary-color) !important; }
+html body :root { --text-muted: #b54545 !important; }
+
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

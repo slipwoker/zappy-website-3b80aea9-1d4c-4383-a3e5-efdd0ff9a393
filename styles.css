@@ -7807,6 +7807,203 @@ html body :root { --backgroundDark: var(--background-color) !important; }
 html body :root { --surface: #f9f4f4 !important; }
 html body :root { --text-dark: var(--primary-color) !important; }
 
+
+.index-final-cta-section {
+  background: var(--background-color) !important;
+  color: var(--primary-color) !important;
+}
+
+.home-registration-section {
+  background-color: var(--background-color) !important;
+  color: var(--primary-color) !important;
+}
+
+.index-about-section {
+  background-color: var(--background-color) !important;
+  color: var(--primary-color) !important;
+}
+
+.index-benefits-section {
+  background-color: var(--background-color) !important;
+  color: var(--primary-color) !important;
+}
+
+.index-products-section {
+  background-color: var(--background-color) !important;
+  color: var(--primary-color) !important;
+}
+
+.index-services-section {
+  background-color: var(--background-color) !important;
+  color: var(--primary-color) !important;
+}
+
+.index-final-cta-section h2,
+.index-final-cta-section p,
+.index-final-cta-section span,
+.index-final-cta-section a,
+.index-final-cta-section .index-final-cta-heading,
+.index-final-cta-section .index-final-cta-subtitle,
+.index-final-cta-section .index-final-cta-badge span {
+  color: var(--primary-color) !important;
+}
+
+.index-final-cta-section .index-final-cta-btn-primary {
+  background-color: var(--primary-color) !important;
+  color: var(--background-color) !important;
+}
+
+.home-registration-section,
+.home-registration-section h1,
+.home-registration-section h2,
+.home-registration-section h3,
+.home-registration-section p,
+.home-registration-section span,
+.home-registration-section li,
+.home-registration-section label,
+.home-registration-section .home-registration-section__headline,
+.home-registration-section .home-registration-section__subtitle,
+.home-registration-section .home-registration-section__form-title,
+.home-registration-section .home-registration-section__form-subtitle,
+.home-registration-section .home-registration-section__feature-item span,
+.home-registration-section .home-registration-section__trust-badge span,
+.home-registration-section .home-registration-section__form-label span {
+  color: var(--primary-color) !important;
+}
+
+.index-about-section,
+.index-about-section h2,
+.index-about-section p,
+.index-about-section span,
+.index-about-section .index-about-section__headline,
+.index-about-section .index-about-section__body,
+.index-about-section .index-about-section__wordmark-text {
+  color: var(--primary-color) !important;
+}
+
+.index-benefits-section,
+.index-benefits-section h2,
+.index-benefits-section h3,
+.index-benefits-section p,
+.index-benefits-section .benefit-card h3,
+.index-benefits-section .benefit-card p {
+  color: var(--primary-color) !important;
+}
+
+.index-products-section,
+.index-products-section h2,
+.index-products-section h3,
+.index-products-section p,
+.index-products-section .index-products-section__title,
+.index-products-section .index-products-section__subtitle,
+.index-products-section .index-products-section__card-title,
+.index-products-section .index-products-section__card-desc {
+  color: var(--primary-color) !important;
+}
+
+.index-services-section,
+.index-services-section h2,
+.index-services-section h3,
+.index-services-section p,
+.index-services-section .index-services-section__title,
+.index-services-section .index-services-section__subtitle,
+.index-services-section .index-services-section__step-title,
+.index-services-section .index-services-section__step-desc {
+  color: var(--primary-color) !important;
+}
+
+.index-services-section .index-services-section__btn {
+  background-color: var(--primary-color) !important;
+  color: var(--background-color) !important;
+}
+
+.home-registration-section .home-registration-section__submit-btn {
+  background-color: var(--primary-color) !important;
+  color: var(--background-color) !important;
+}
+
+.index-services-section.index-services-section {
+  background-color: var(--background-color) !important;
+}
+
+.index-services-section.index-services-section,
+.index-services-section.index-services-section h2,
+.index-services-section.index-services-section h3,
+.index-services-section.index-services-section p,
+.index-services-section.index-services-section .index-services-section__title,
+.index-services-section.index-services-section .index-services-section__subtitle,
+.index-services-section.index-services-section .index-services-section__step-title,
+.index-services-section.index-services-section .index-services-section__step-desc {
+  color: var(--primary-color) !important;
+}
+
+.index-products-section.index-products-section,
+.index-products-section.index-products-section h2,
+.index-products-section.index-products-section h3,
+.index-products-section.index-products-section p,
+.index-products-section.index-products-section .index-products-section__title,
+.index-products-section.index-products-section .index-products-section__subtitle,
+.index-products-section.index-products-section .index-products-section__card-title,
+.index-products-section.index-products-section .index-products-section__card-desc {
+  color: var(--primary-color) !important;
+}
+
+.index-benefits-section.index-benefits-section {
+  background-color: var(--background-color) !important;
+}
+
+.index-benefits-section.index-benefits-section,
+.index-benefits-section.index-benefits-section h2,
+.index-benefits-section.index-benefits-section h3,
+.index-benefits-section.index-benefits-section p,
+.index-benefits-section.index-benefits-section .benefit-card h3,
+.index-benefits-section.index-benefits-section .benefit-card p {
+  color: var(--primary-color) !important;
+}
+
+.index-services-section .index-services-section__title {
+  color: var(--primary-color) !important;
+}
+
+.index-services-section .index-services-section__subtitle {
+  color: var(--primary-color) !important;
+}
+
+.index-services-section .index-services-section__step-title {
+  color: var(--primary-color) !important;
+}
+
+.index-services-section .index-services-section__step-desc {
+  color: var(--primary-color) !important;
+}
+
+.index-services-section .index-services-section__btn {
+  color: var(--primary-color) !important;
+}
+
+.index-products-section .index-products-section__title {
+  color: var(--primary-color) !important;
+}
+
+.index-products-section .index-products-section__subtitle {
+  color: var(--primary-color) !important;
+}
+
+.index-products-section .index-products-section__card-title {
+  color: var(--primary-color) !important;
+}
+
+.index-products-section .index-products-section__card-desc {
+  color: var(--primary-color) !important;
+}
+
+.index-benefits-section .benefit-card h3 {
+  color: var(--primary-color) !important;
+}
+
+.index-benefits-section .benefit-card p {
+  color: var(--primary-color) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

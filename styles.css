@@ -7851,18 +7851,18 @@ html body :root { --surface: #f9f4f4 !important; }
 html body :root { --text-dark: var(--primary-color) !important; }
 
 .index-final-cta-section {
-  background: #ffffff !important;
-  color: #9b1c1c !important;
+  background: #9b1c1c !important;
+  color: #ffffff !important;
 }
 
 .home-registration-section {
-  background-color: #ffffff !important;
-  color: #9b1c1c !important;
+  background-color: #9b1c1c !important;
+  color: #ffffff !important;
 }
 
 .index-about-section {
-  background-color: #ffffff !important;
-  color: #9b1c1c !important;
+  background-color: #9b1c1c !important;
+  color: #ffffff !important;
 }
 
 .index-benefits-section {
@@ -7871,8 +7871,8 @@ html body :root { --text-dark: var(--primary-color) !important; }
 }
 
 .index-products-section {
-  background-color: #ffffff !important;
-  color: #9b1c1c !important;
+  background-color: #9b1c1c !important;
+  color: #ffffff !important;
 }
 
 .index-services-section {
@@ -7910,7 +7910,7 @@ html body :root { --text-dark: var(--primary-color) !important; }
 .home-registration-section .home-registration-section__feature-item span,
 .home-registration-section .home-registration-section__trust-badge span,
 .home-registration-section .home-registration-section__form-label span {
-  color: #9b1c1c !important;
+  color: #ffffff !important;
 }
 
 .index-about-section,
@@ -7920,7 +7920,7 @@ html body :root { --text-dark: var(--primary-color) !important; }
 .index-about-section .index-about-section__headline,
 .index-about-section .index-about-section__body,
 .index-about-section .index-about-section__wordmark-text {
-  color: #9b1c1c !important;
+  color: #ffffff !important;
 }
 
 .index-benefits-section,
@@ -7940,7 +7940,7 @@ html body :root { --text-dark: var(--primary-color) !important; }
 .index-products-section .index-products-section__subtitle,
 .index-products-section .index-products-section__card-title,
 .index-products-section .index-products-section__card-desc {
-  color: #9b1c1c !important;
+  color: #ffffff !important;
 }
 
 .index-services-section,
@@ -7987,7 +7987,7 @@ html body :root { --text-dark: var(--primary-color) !important; }
 .index-products-section.index-products-section .index-products-section__subtitle,
 .index-products-section.index-products-section .index-products-section__card-title,
 .index-products-section.index-products-section .index-products-section__card-desc {
-  color: #9b1c1c !important;
+  color: #ffffff !important;
 }
 
 .index-benefits-section.index-benefits-section {
@@ -8056,22 +8056,32 @@ html body :root { --text-dark: var(--primary-color) !important; }
   --text-muted: #b54545;
   --text-light: var(--primary-color);
 }
+
 /* zappy-self-heal */
 :root { --bg-dark: var(--background-color) !important; }
+
 :root { --bg-light: var(--background-color) !important; }
+
 :root { --background: var(--background-color) !important; }
+
 :root { --backgroundDark: var(--background-color) !important; }
+
 :root { --text-dark: var(--primary-color) !important; }
+
 :root { --text-muted: #b54545 !important; }
 
 /* zappy-self-heal */
 html body :root { --bg-dark: var(--background-color) !important; }
-html body :root { --bg-light: var(--background-color) !important; }
-html body :root { --background: var(--background-color) !important; }
-html body :root { --backgroundDark: var(--background-color) !important; }
-html body :root { --text-dark: var(--primary-color) !important; }
-html body :root { --text-muted: #b54545 !important; }
 
+html body :root { --bg-light: var(--background-color) !important; }
+
+html body :root { --background: var(--background-color) !important; }
+
+html body :root { --backgroundDark: var(--background-color) !important; }
+
+html body :root { --text-dark: var(--primary-color) !important; }
+
+html body :root { --text-muted: #b54545 !important; }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

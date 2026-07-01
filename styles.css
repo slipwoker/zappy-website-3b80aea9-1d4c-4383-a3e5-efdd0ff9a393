@@ -2811,7 +2811,7 @@ main { flex: 1 0 auto; }
   }
 
 .index-products-section__grid {
-  grid-template-columns: repeat(5, 1fr) !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   gap: 24px;
 }
 
@@ -7732,7 +7732,7 @@ html, body {
 }
 
 .index-products-section .index-products-section__grid {
-  grid-template-columns: 1fr !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
 }
 
 .index-products-section .index-products-section__title {
@@ -7785,7 +7785,7 @@ html, body {
 }
 
 .index-products-section .index-products-section__grid {
-  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
 }
 
 html body .index-benefits-section .benefits-grid {
@@ -7793,7 +7793,7 @@ html body .index-benefits-section .benefits-grid {
 }
 
 html body .index-products-section .index-products-section__grid {
-  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
 }
 
 /* Zappy custom logo size (desktop only — mobile stays at 110px/35px) */

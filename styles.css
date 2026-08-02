@@ -7811,6 +7811,69 @@ html body .index-products-section .index-products-section__grid {
 }
 
 /* /Zappy custom logo size */
+
+.index-about-section, .index-about-section p, .index-about-section span {
+  color: #f0e0e0 !important;
+}
+
+.index-about-section h2, .index-about-section .index-about-section__headline, .index-about-section .index-about-section__headline span {
+  color: var(--background-color, var(--background, var(--bg-light, #ffffff))) !important;
+}
+
+.index-about-section .index-about-section__wordmark-text {
+  color: #f5c6c6 !important;
+}
+
+.index-final-cta-section .index-final-cta-heading {
+  color: var(--background-color, var(--background, var(--bg-light, #ffffff))) !important;
+}
+
+.index-final-cta-section .index-final-cta-subtitle {
+  color: #f0e0e0 !important;
+}
+
+.index-final-cta-section .index-final-cta-badge span {
+  color: var(--background-color, var(--background, var(--bg-light, #ffffff))) !important;
+}
+
+.index-hero-section {
+  padding-bottom: 80px !important;
+}
+
+#ai-section-1782657641900-62d0b1i {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}
+
+#zappy-section-2 {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}
+
+.index-about-section {
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+}
+
+#temp-section-1782135133932 {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}
+
+#index-products-section {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}
+
+.index-services-section {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}
+
+#zappy-section-7 {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

@@ -7874,6 +7874,13 @@ html body .index-products-section .index-products-section__grid {
   padding-top: 80px !important;
   padding-bottom: 80px !important;
 }
+
+.index-services-section .index-services-section__title,
+.index-services-section .index-services-section__subtitle,
+.index-services-section .index-services-section__step-title,
+.index-services-section .index-services-section__step-desc {
+  color: var(--text-dark) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

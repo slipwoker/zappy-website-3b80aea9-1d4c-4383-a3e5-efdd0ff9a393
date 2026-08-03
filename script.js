@@ -648,6 +648,47 @@ window.onload = function() {
     });
   })();
 
+/* ZAPPY_CUSTOM_JS_START:a44525ff920a */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function() {
+  const trackContainer = document.querySelector('.gsr-carousel-track-container');
+  const dots = document.querySelectorAll('.gsr-dot');
+  if (!trackContainer || !dots.length) return;
+
+  function updateActiveDot() {
+    const scrollLeft = trackContainer.scrollLeft;
+    const cardWidth = trackContainer.querySelector('.gsr-card')?.offsetWidth || 340;
+    const gap = 16;
+    const activeIndex = Math.round(scrollLeft / (cardWidth + gap));
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === activeIndex);
+    });
+  }
+
+  trackContainer.addEventListener('scroll', updateActiveDot, { passive: true });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', function() {
+      const cardWidth = trackContainer.querySelector('.gsr-card')?.offsetWidth || 340;
+      const gap = 16;
+      trackContainer.scrollTo({ left: i * (cardWidth + gap), behavior: 'smooth' });
+    });
+  });
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:a44525ff920a */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){

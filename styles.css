@@ -8137,6 +8137,17 @@ html body .index-products-section .index-products-section__grid {
   background: var(--primary, var(--primary-color, var(--primary, var(--primary-color, var(--primary, #9b1c1c))))) !important;
 }
 }
+
+.index-products-section .index-products-section__card-img-wrapper,
+.index-products-section .index-products-section__card-img-wrapper > div {
+  border-radius: 16px 16px 0 0 !important;
+}
+
+.index-products-section .index-products-section__card-img {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

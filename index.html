@@ -938,17 +938,18 @@
 /* Responsive */
 @media (max-width: 768px) {
   .home-registration-section {
-  padding: 60px 12px 40px;
+  padding: 40px 12px 40px !important;
 }
 
   .home-registration-section__headline {
-    font-size: 2rem;
-  }
+  font-size: 1.5rem !important;
+  text-align: center;
+}
 
   .home-registration-section__subtitle {
-    font-size: 1rem;
-    text-align: center;
-  }
+  font-size: 0.9rem;
+  text-align: center;
+}
 
   .home-registration-section__content-grid {
     grid-template-columns: 1fr !important;
@@ -969,12 +970,12 @@
   }
 
   .home-registration-section__form-card {
-    padding: 24px 20px;
-  }
+  padding: 20px 16px !important;
+}
 
   .home-registration-section__form-title {
-    font-size: 1.5rem;
-  }
+  font-size: 1.3rem !important;
+}
 
   .home-registration-section__image-badge {
     bottom: 8px;
@@ -1135,13 +1136,15 @@
 /* Responsive */
 @media (max-width: 768px) {
   .index-hero-section {
-    padding: 70px 16px 50px;
-  }
+  padding: 70px 16px 50px;
+  padding-top: 80px !important;
+  padding-bottom: 50px !important;
+}
 
   .index-hero-section .hero-container {
-    flex-direction: column;
-    gap: 40px;
-  }
+  flex-direction: column;
+  gap: 24px;
+}
 
   .index-hero-section .hero-text-col {
     flex: 1 1 auto;
@@ -1164,15 +1167,18 @@
   }
 
   .index-hero-section .hero-subtitle {
-    font-size: 1.125rem;
-    text-align: center;
-    max-width: 100%;
-    margin-bottom: 28px;
-  }
+  font-size: 1rem !important;
+  text-align: center;
+  max-width: 100%;
+  margin-bottom: 24px;
+}
 
   .index-hero-section .hero-cta-group {
-    justify-content: center;
-  }
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
 
   .index-hero-section .hero-image-col {
     flex: 1 1 auto;
@@ -1180,9 +1186,10 @@
   }
 
   .index-hero-section .hero-image-wrapper {
-    max-width: 500px;
-    margin: 0 auto;
-  }
+  max-width: 100%;
+  margin: 0 auto;
+  aspect-ratio: 3/2;
+}
 }
 /* ZAPPY_POSTGEN_GUARD_HERO_FONT_CAP:index-hero */
 .hero h1, .hero-section h1, [class*="hero-"] h1, [class~="hero"] h1, .hero .hero-title, .hero-title { font-size: 48px !important; line-height: 1.2 !important; }

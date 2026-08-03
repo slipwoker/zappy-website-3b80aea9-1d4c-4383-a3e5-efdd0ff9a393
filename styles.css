@@ -2676,6 +2676,8 @@ main { flex: 1 0 auto; }
   direction: rtl;
   position: relative;
   overflow: visible;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
 }
 
 .index-products-section__container {
@@ -2690,7 +2692,7 @@ main { flex: 1 0 auto; }
 
 .index-products-section__title {
   font-family: 'Rubik', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 800;
   color: #ffffff;
   margin: 0 0 8px;
@@ -2758,7 +2760,7 @@ main { flex: 1 0 auto; }
 
 .index-products-section__card-title {
   font-family: 'Rubik', sans-serif;
-  font-size: 1.1rem !important;
+  font-size: 0.9rem !important;
   font-weight: 600;
   color: var(--text-dark);
   margin: 0 0 4px;
@@ -2767,7 +2769,7 @@ main { flex: 1 0 auto; }
 
 .index-products-section__card-desc {
   font-family: 'Rubik', sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 400;
   color: var(--text-muted);
   line-height: 1.5;
@@ -2824,8 +2826,8 @@ main { flex: 1 0 auto; }
   }
 
 .index-products-section__card-body {
-    padding: 20px;
-  }
+  padding: 12px !important;
+}
 }
 
 /* services */
@@ -7732,7 +7734,8 @@ html, body {
 }
 
 .index-products-section .index-products-section__grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 12px;
 }
 
 .index-products-section .index-products-section__title {
@@ -7880,6 +7883,196 @@ html body .index-products-section .index-products-section__grid {
 .index-services-section .index-services-section__step-title,
 .index-services-section .index-services-section__step-desc {
   color: var(--text-dark) !important;
+}
+
+@media (max-width: 768px) {
+.index-final-cta-section {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+.index-final-cta-section .index-final-cta-heading {
+  font-size: 1.5rem !important;
+}
+
+.index-final-cta-section .index-final-cta-subtitle {
+  font-size: 0.9rem !important;
+}
+
+.index-final-cta-section .index-final-cta-trust-badges {
+  gap: 16px !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.index-final-cta-section .index-final-cta-badge {
+  font-size: 0.85rem !important;
+}
+
+.index-final-cta-section .index-final-cta-btn {
+  padding: 14px 24px !important;
+  font-size: 1rem !important;
+}
+
+.index-about-section {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+
+.index-about-section .index-about-section__headline {
+  font-size: 1.5rem !important;
+}
+
+.index-about-section .index-about-section__body {
+  font-size: 0.95rem !important;
+}
+
+.index-about-section .index-about-section__heart-icon {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.index-hero-section {
+  padding-top: 100px !important;
+  padding-bottom: 60px !important;
+}
+
+.index-hero-section .hero-headline {
+  font-size: 1.75rem !important;
+  text-align: center !important;
+}
+
+.index-hero-section .hero-subtitle {
+  font-size: 1rem !important;
+  text-align: center !important;
+  max-width: 100% !important;
+}
+
+.index-hero-section .hero-image-wrapper {
+  max-width: 100% !important;
+}
+
+.index-hero-section .hero-image {
+  aspect-ratio: 4/3 !important;
+}
+
+.index-benefits-section .benefits-header h2 {
+  font-size: 1.6rem !important;
+}
+
+.index-benefits-section .benefits-header p {
+  font-size: 0.9rem !important;
+}
+
+.index-benefits-section .benefit-card h3 {
+  font-size: 1.05rem !important;
+}
+
+.index-benefits-section .benefit-card p {
+  font-size: 0.85rem !important;
+}
+
+.index-services-section {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+.index-services-section .index-services-section__title {
+  font-size: 1.5rem !important;
+}
+
+.index-services-section .index-services-section__subtitle {
+  font-size: 0.9rem !important;
+}
+
+.index-services-section .index-services-section__step-title {
+  font-size: 1.1rem !important;
+}
+
+.index-services-section .index-services-section__step-desc {
+  font-size: 0.85rem !important;
+}
+
+.index-services-section .index-services-section__btn {
+  font-size: 0.95rem !important;
+  padding: 12px 24px !important;
+}
+
+.home-registration-section {
+  padding-top: 50px !important;
+  padding-bottom: 40px !important;
+}
+
+.home-registration-section .home-registration-section__headline {
+  font-size: 1.5rem !important;
+}
+
+.home-registration-section .home-registration-section__subtitle {
+  font-size: 0.9rem !important;
+}
+
+.home-registration-section .home-registration-section__form-title {
+  font-size: 1.3rem !important;
+}
+
+.home-registration-section .home-registration-section__form-card {
+  padding: 24px 16px !important;
+}
+
+.home-registration-section .home-registration-section__submit-btn {
+  font-size: 1rem !important;
+  padding: 14px 24px !important;
+}
+
+.gsr-testimonials .gsr-title {
+  font-size: 1.4rem !important;
+}
+
+.gsr-testimonials .gsr-subtitle {
+  font-size: 0.9rem !important;
+}
+
+.gsr-testimonials .gsr-card {
+  padding: 14px !important;
+}
+
+.gsr-testimonials .gsr-card-text {
+  font-size: 0.9rem !important;
+}
+
+.site-footer {
+  padding-top: 40px !important;
+  padding-bottom: 20px !important;
+}
+
+.site-footer .footer-grid {
+  gap: 24px !important;
+}
+
+.site-footer .footer-col h4 {
+  font-size: 1.1rem !important;
+}
+
+.site-footer .footer-tagline {
+  font-size: 0.9rem !important;
+}
+
+.site-footer .footer-col ul li,
+  .site-footer .footer-col ul li a {
+  font-size: 0.9rem !important;
+}
+
+.site-footer .footer-bottom {
+  flex-direction: column !important;
+  gap: 8px !important;
+  text-align: center !important;
+}
+
+.site-footer .footer-legal {
+  gap: 12px !important;
+}
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {

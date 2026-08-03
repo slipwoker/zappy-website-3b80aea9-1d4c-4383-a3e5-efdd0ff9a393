@@ -7796,7 +7796,7 @@ html body .index-benefits-section .benefits-grid {
 }
 
 html body .index-products-section .index-products-section__grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 }
 
 /* Zappy custom logo size (desktop only — mobile stays at 110px/35px) */

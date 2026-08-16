@@ -689,6 +689,77 @@ window.onload = function() {
 })();
 /* ZAPPY_CUSTOM_JS_END:a44525ff920a */
 
+/* ZAPPY_CUSTOM_JS_START:6c907863f393 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function () {
+  var section = document.querySelector('.index-products-section');
+  var track = section && section.querySelector('.index-products-section__grid');
+  if (!section || !track) return;
+
+  function isMobile() { return window.innerWidth <= 768; }
+  if (!isMobile()) return;
+
+  function ensureDots() {
+    if (section.querySelector('.zappy-carousel-dots')) return;
+    var dots = document.createElement('div');
+    dots.className = 'zappy-carousel-dots';
+    var cards = track.querySelectorAll('.index-products-section__card');
+    cards.forEach(function (_, i) {
+      var d = document.createElement('button');
+      d.className = 'zappy-carousel-dot';
+      d.setAttribute('aria-label', 'כרטיס ' + (i + 1));
+      d.addEventListener('click', function () {
+        var c = track.querySelectorAll('.index-products-section__card')[i];
+        if (c) track.scrollTo({ left: c.offsetLeft - track.offsetLeft - 20, behavior: 'smooth' });
+      });
+      dots.appendChild(d);
+    });
+    section.querySelector('.index-products-section__container').appendChild(dots);
+  }
+
+  function updateDots() {
+    var dots = section.querySelectorAll('.zappy-carousel-dot');
+    if (!dots.length) return;
+    var cards = track.querySelectorAll('.index-products-section__card');
+    var center = track.scrollLeft + track.clientWidth / 2;
+    var active = 0;
+    cards.forEach(function (c, i) {
+      if (c.offsetLeft <= center) active = i;
+    });
+    dots.forEach(function (d, i) {
+      d.classList.toggle('active', i === active);
+    });
+  }
+
+  ensureDots();
+  updateDots();
+
+  var t;
+  track.addEventListener('scroll', function () {
+    clearTimeout(t);
+    t = setTimeout(updateDots, 120);
+  }, { passive: true });
+
+  window.addEventListener('resize', function () {
+    if (!isMobile()) return;
+    ensureDots();
+    updateDots();
+  });
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:6c907863f393 */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){

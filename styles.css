@@ -8731,6 +8731,67 @@ html, body {
   width: 100% !important;
 }
 }
+
+@media (max-width: 768px) {
+.index-products-section .index-products-section__grid,
+  #index-products-section #zappy-auto-grid-1782042137918-wqzdcd {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+  grid-template-columns: none !important;
+  --zappy-grid-cols: none !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding: 8px 20px 16px !important;
+  box-sizing: border-box !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  scroll-snap-type: x mandatory !important;
+  scroll-behavior: smooth !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.index-products-section .index-products-section__grid::-webkit-scrollbar {
+  display: none !important;
+}
+
+.index-products-section .index-products-section__card {
+  flex: 0 0 auto !important;
+  min-width: 0 !important;
+  width: 78vw !important;
+  max-width: 300px !important;
+  scroll-snap-align: start !important;
+  scroll-snap-stop: always !important;
+  margin: 0 !important;
+}
+
+.index-products-section .index-products-section__card-img-wrapper,
+  .index-products-section .index-products-section__card-img-wrapper > div,
+  .index-products-section .index-products-section__card-img-wrapper img {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.index-products-section__container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.index-products-section__header {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  box-sizing: border-box !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

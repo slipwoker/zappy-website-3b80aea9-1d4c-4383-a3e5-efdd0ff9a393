@@ -689,17 +689,56 @@ window.onload = function() {
 })();
 /* ZAPPY_CUSTOM_JS_END:a44525ff920a */
 
-/* ZAPPY_CUSTOM_JS_START:6c907863f393 */
+/* ZAPPY_CUSTOM_JS_START:f99426ee6eb5 */
 (function () {
   function __zappyCustomInit() {
     try {
 (function () {
   var section = document.querySelector('.index-products-section');
-  var track = section && section.querySelector('.index-products-section__grid');
-  if (!section || !track) return;
+  if (!section) return;
+  var track = section.querySelector('.index-products-section__grid');
+  if (!track) return;
 
   function isMobile() { return window.innerWidth <= 768; }
-  if (!isMobile()) return;
+
+  function applyMobile() {
+    if (!isMobile()) {
+      track.style.display = '';
+      track.style.flexWrap = '';
+      track.style.overflowX = '';
+      track.style.scrollSnapType = '';
+      return;
+    }
+    var s = track.style;
+    s.setProperty('display', 'flex', 'important');
+    s.setProperty('flex-direction', 'row', 'important');
+    s.setProperty('flex-wrap', 'nowrap', 'important');
+    s.setProperty('align-items', 'stretch', 'important');
+    s.setProperty('gap', '16px', 'important');
+    s.setProperty('grid-template-columns', 'none', 'important');
+    s.setProperty('--zappy-grid-cols', 'none', 'important');
+    s.setProperty('width', '100vw', 'important');
+    s.setProperty('max-width', '100vw', 'important');
+    s.setProperty('margin-left', 'calc(50% - 50vw)', 'important');
+    s.setProperty('margin-right', 'calc(50% - 50vw)', 'important');
+    s.setProperty('padding', '8px 20px 16px', 'important');
+    s.setProperty('box-sizing', 'border-box', 'important');
+    s.setProperty('overflow-x', 'auto', 'important');
+    s.setProperty('overflow-y', 'hidden', 'important');
+    s.setProperty('scroll-snap-type', 'x mandatory', 'important');
+    s.setProperty('scroll-behavior', 'smooth', 'important');
+    s.setProperty('scrollbar-width', 'none', 'important');
+
+    track.querySelectorAll('.index-products-section__card').forEach(function (c) {
+      c.style.setProperty('flex', '0 0 auto', 'important');
+      c.style.setProperty('min-width', '0', 'important');
+      c.style.setProperty('width', '78vw', 'important');
+      c.style.setProperty('max-width', '300px', 'important');
+      c.style.setProperty('scroll-snap-align', 'start', 'important');
+      c.style.setProperty('scroll-snap-stop', 'always', 'important');
+      c.style.setProperty('margin', '0', 'important');
+    });
+  }
 
   function ensureDots() {
     if (section.querySelector('.zappy-carousel-dots')) return;
@@ -725,28 +764,31 @@ window.onload = function() {
     var cards = track.querySelectorAll('.index-products-section__card');
     var center = track.scrollLeft + track.clientWidth / 2;
     var active = 0;
-    cards.forEach(function (c, i) {
-      if (c.offsetLeft <= center) active = i;
-    });
-    dots.forEach(function (d, i) {
-      d.classList.toggle('active', i === active);
-    });
+    cards.forEach(function (c, i) { if (c.offsetLeft <= center) active = i; });
+    dots.forEach(function (d, i) { d.classList.toggle('active', i === active); });
   }
 
+  applyMobile();
   ensureDots();
   updateDots();
+  track.scrollLeft = 0;
 
   var t;
-  track.addEventListener('scroll', function () {
-    clearTimeout(t);
-    t = setTimeout(updateDots, 120);
-  }, { passive: true });
+  track.addEventListener('scroll', function () { clearTimeout(t); t = setTimeout(updateDots, 100); }, { passive: true });
 
-  window.addEventListener('resize', function () {
+  var r;
+  window.addEventListener('resize', function () { clearTimeout(r); r = setTimeout(function () { applyMobile(); ensureDots(); updateDots(); }, 150); });
+
+  // Re-apply after a short delay to survive any deferred editor re-render
+  var guard = setInterval(function () {
     if (!isMobile()) return;
+    if (getComputedStyle(track).display !== 'flex' || getComputedStyle(track).overflowX !== 'auto') {
+      applyMobile();
+    }
     ensureDots();
     updateDots();
-  });
+  }, 800);
+  setTimeout(function () { clearInterval(guard); }, 12000);
 })();
     } catch (e) {
       if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
@@ -758,7 +800,7 @@ window.onload = function() {
     __zappyCustomInit();
   }
 })();
-/* ZAPPY_CUSTOM_JS_END:6c907863f393 */
+/* ZAPPY_CUSTOM_JS_END:f99426ee6eb5 */
 
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */

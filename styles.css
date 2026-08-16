@@ -8792,6 +8792,33 @@ html, body {
   box-sizing: border-box !important;
 }
 }
+
+.index-products-section .zappy-carousel-dots {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-top: 18px !important;
+  padding: 0 20px !important;
+}
+
+.index-products-section .zappy-carousel-dot {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: rgba(255, 255, 255, 0.35) !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+}
+
+.index-products-section .zappy-carousel-dot.active {
+  background: var(--background-color, var(--background, var(--bg-light, #ffffff))) !important;
+  width: 22px !important;
+  border-radius: 999px !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

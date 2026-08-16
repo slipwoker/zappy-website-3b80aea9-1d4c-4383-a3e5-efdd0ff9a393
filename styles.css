@@ -8695,6 +8695,42 @@ html, body {
   font-size: 0.8rem !important;
 }
 }
+
+@media (max-width: 768px) {
+.index-products-section .index-products-section__grid,
+  #index-products-section #zappy-auto-grid-1782042137918-wqzdcd {
+  grid-template-columns: 1fr !important;
+  --zappy-grid-cols: 1fr !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.index-products-section .index-products-section__card {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.index-products-section .index-products-section__card-img-wrapper,
+  .index-products-section .index-products-section__card-img-wrapper > div {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.index-products-section__container {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  box-sizing: border-box !important;
+}
+
+.index-hero-section .hero-image-wrapper,
+  .index-hero-section .hero-image-wrapper > div {
+  max-width: 100% !important;
+}
+
+.index-hero-section .hero-image-col {
+  width: 100% !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
@@ -8885,6 +8921,29 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   font-weight: 600 !important;
   color: var(--text-dark, #1a1a1a) !important;
   white-space: nowrap !important;
+}
+
+
+/* ZAPPY_CLOSED_MOBILE_NAV_HIDE_V1 */
+@media (max-width: 768px) {
+  .navbar .nav-menu:not(.active):not(.open),
+  nav.navbar .nav-menu:not(.active):not(.open),
+  #navMenu:not(.active):not(.open) {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  .navbar .nav-menu:not(.active):not(.open) *,
+  nav.navbar .nav-menu:not(.active):not(.open) *,
+  #navMenu:not(.active):not(.open) * {
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+  .navbar .nav-menu:not(.active):not(.open) .sub-menu,
+  nav.navbar .nav-menu:not(.active):not(.open) .sub-menu,
+  #navMenu:not(.active):not(.open) .sub-menu {
+    display: none !important;
+  }
 }
 
 

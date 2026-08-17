@@ -8819,6 +8819,13 @@ html, body {
   width: 22px !important;
   border-radius: 999px !important;
 }
+
+@media (max-width: 768px) {
+.home-registration-section {
+  overflow: visible !important;
+  height: auto !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

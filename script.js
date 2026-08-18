@@ -802,6 +802,57 @@ window.onload = function() {
 })();
 /* ZAPPY_CUSTOM_JS_END:f99426ee6eb5 */
 
+/* ZAPPY_CUSTOM_JS_START:8de5b6d06457 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function () {
+  var section = document.querySelector('.home-hero-slider-section');
+  if (!section) return;
+  var slides = section.querySelectorAll('.hhero-slide');
+  if (slides.length < 2) return;
+  var current = 0;
+  var interval = 5000;
+  var timer = null;
+
+  function goTo(index) {
+    var prev = slides[current];
+    var next = slides[index];
+    if (prev) prev.classList.remove('hhero-slide--active');
+    if (next) next.classList.add('hhero-slide--active');
+    current = index;
+  }
+
+  function next() {
+    goTo((current + 1) % slides.length);
+  }
+
+  function start() {
+    if (timer) clearInterval(timer);
+    timer = setInterval(next, interval);
+  }
+
+  start();
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+      if (timer) clearInterval(timer);
+    } else {
+      start();
+    }
+  });
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:8de5b6d06457 */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){

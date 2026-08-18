@@ -2236,7 +2236,7 @@ main { flex: 1 0 auto; }
 .site-footer { flex-shrink: 0; }
 
 .index-hero-section {
-  background-color: var(--bg-dark);
+  background-color: #ffffff !important;
   color: var(--text-light);
   padding: 0;
   margin: 0;
@@ -7846,6 +7846,7 @@ html body .index-products-section .index-products-section__grid {
 
 .index-hero-section {
   padding-bottom: 80px !important;
+  background-color: #ffffff !important;
 }
 
 #ai-section-1782657641900-62d0b1i {
@@ -9048,7 +9049,7 @@ html body .index-hero-section .hero-container { display: grid !important; }
   padding: 0 !important;
   margin: 0 !important;
   width: 100% !important;
-  background-color: var(--background-color, var(--background, var(--bg-light, #ffffff))) !important;
+  background-color: #ffffff !important;
   min-height: 0 !important;
   overflow: hidden;
 }

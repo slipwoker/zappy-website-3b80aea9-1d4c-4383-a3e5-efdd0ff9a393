@@ -8864,6 +8864,182 @@ html, body {
   padding-right: 16px !important;
 }
 }
+
+.index-hero-section {
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: 100vh !important;
+  width: 100% !important;
+  background-color: #1a1a1a !important;
+  display: block !important;
+}
+
+.index-hero-section .hero-container {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 0 !important;
+  align-items: stretch !important;
+  direction: rtl;
+  min-height: 100vh !important;
+}
+
+.index-hero-section .hero-carousel-col {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.index-hero-section .hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.index-hero-section .hero-carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.45, 0, 0.15, 1);
+}
+
+.index-hero-section .hero-carousel-slide {
+  flex: 0 0 100%;
+  height: 100%;
+  min-width: 100%;
+}
+
+.index-hero-section .hero-carousel-slide img {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+.index-hero-section .hero-carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  transition: background 0.3s ease;
+}
+
+.index-hero-section .hero-carousel-nav:hover {
+  background: var(--primary, var(--primary-color, var(--primary, #9b1c1c)));
+}
+
+.index-hero-section .hero-carousel-prev {
+  inset-inline-start: 16px;
+}
+
+.index-hero-section .hero-carousel-next {
+  inset-inline-end: 16px;
+}
+
+.index-hero-section .hero-carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  inset-inline-start: 50%;
+  transform: translateX(50%);
+  display: flex;
+  gap: 8px;
+  z-index: 5;
+}
+
+.index-hero-section .hero-carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.index-hero-section .hero-carousel-dot.active {
+  background: #fff;
+  transform: scale(1.3);
+}
+
+.index-hero-section .hero-text-col {
+  flex: none !important;
+  width: auto !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 56px !important;
+  background-color: #1a1a1a;
+  color: var(--background-color, var(--background, var(--bg-light, #ffffff)));
+  text-align: right;
+}
+
+.index-hero-section .brand-tagline-text {
+  color: var(--primary, var(--primary-color, var(--primary, #9b1c1c))) !important;
+}
+
+.index-hero-section .hero-headline {
+  color: var(--background-color, var(--background, var(--bg-light, #ffffff))) !important;
+}
+
+.index-hero-section .hero-headline span {
+  color: var(--background-color, var(--background, var(--bg-light, #ffffff))) !important;
+}
+
+.index-hero-section .hero-subtitle {
+  color: #f0e0e0 !important;
+  max-width: 100% !important;
+}
+
+.index-hero-section .hero-subtitle span {
+  color: #f0e0e0 !important;
+}
+
+@media (max-width: 768px) {
+.index-hero-section .hero-container {
+  grid-template-columns: 1fr !important;
+}
+
+.index-hero-section .hero-carousel-col, .index-hero-section .hero-carousel, .index-hero-section .hero-carousel-slide img {
+  min-height: 45vh;
+}
+
+.index-hero-section .hero-text-col {
+  padding: 48px 24px !important;
+  text-align: center;
+}
+
+.index-hero-section .hero-carousel-dots {
+  transform: translateX(50%);
+}
+}
+/* zappy-self-heal */
+.index-hero-section .hero-container { display: grid !important; }
+.index-hero-section .hero-carousel-col { min-height: 100vh !important; }
+.index-hero-section .hero-carousel { min-height: 100vh !important; }
+.index-hero-section .hero-carousel-slide img { min-height: 100vh !important; }
+
+/* zappy-self-heal */
+html body .index-hero-section .hero-container { display: grid !important; }
+
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

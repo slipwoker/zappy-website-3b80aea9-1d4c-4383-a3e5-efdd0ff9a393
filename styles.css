@@ -8149,7 +8149,7 @@ html body .index-products-section .index-products-section__grid {
 }
 
 .index-products-section .index-products-section__card-img {
-  object-fit: cover !important;
+  object-fit: contain !important;
   width: 100% !important;
   height: 100% !important;
 }

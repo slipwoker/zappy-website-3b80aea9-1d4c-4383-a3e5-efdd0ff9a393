@@ -73,7 +73,7 @@ Information about WCAG compliance and accessibility features.
 - Fields:
   - `full_name` (text, required)
   - `phone` (tel, required)
-  - `privacy_consent` (checkbox)
+  - `privacy_consent` (checkbox, required)
 
 ---
 

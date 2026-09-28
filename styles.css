@@ -8829,10 +8829,10 @@ html, body {
 
 .home-hero-slider-section {
   display: flex;
-  flex-direction: row;
-  min-height: 640px;
+  flex-direction: column;
+  min-height: 100vh;
   max-height: 760px;
-  height: 82vh;
+  height: 100vh;
   background: var(--background-color, var(--background, var(--bg-light, #ffffff)));
   margin: 0;
   position: relative;
@@ -8951,11 +8951,27 @@ html, body {
   height: 320px;
 }
 }
-/* zappy-self-heal */
-.home-hero-slider-section { flex-direction: row !important; }
-.home-hero-slider-section { min-height: 640px !important; }
-.home-hero-slider-section { max-height: 760px !important; }
-.home-hero-slider-section { height: 82vh !important; }
+.home-hero-slider-section {
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100vh;
+}
+.home-hero-slider-section {
+  min-height: 100vh;
+  flex-direction: column;
+  height: 100vh;
+}
+.home-hero-slider-section {
+  max-height: 760px !important;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100vh;
+}
+.home-hero-slider-section {
+  height: 100vh;
+  flex-direction: column;
+  min-height: 100vh;
+}
 .home-hero-slider-section .hhero-slider { flex: 1 1 50% !important; }
 .home-hero-slider-section .hhero-slider { height: 100% !important; }
 .home-hero-slider-section .hhero-slider { order: 1 !important; }
@@ -9007,6 +9023,8 @@ html, body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .home-hero-slider-section .hhero-slider {
@@ -9211,6 +9229,72 @@ html, body {
 
 @media (max-width: 600px) {
 .index-products-section .sams-catalog-grid {
+  grid-template-columns: 1fr !important;
+}
+}
+
+#index-products-section #zappy-auto-grid-1782042137918-wqzdcd.sams-catalog-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px !important;
+  align-items: stretch !important;
+}
+
+.index-products-section .sams-catalog-img {
+  aspect-ratio: 4/3 !important;
+  background: #f3e8e8 !important;
+}
+
+.index-products-section .sams-catalog-img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.index-products-section .sams-catalog-card {
+  background: var(--background-color, var(--background, var(--bg-light, #ffffff))) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.index-products-section .sams-catalog-model {
+  font-size: 1.5rem !important;
+  font-weight: 800 !important;
+  color: var(--text-dark, #1a1a1a) !important;
+}
+
+.index-products-section .sams-catalog-desc {
+  font-size: 1.0625rem !important;
+  color: var(--text-dark, #1a1a1a) !important;
+  line-height: 1.55 !important;
+}
+
+.index-products-section .sams-catalog-price {
+  font-size: 1.125rem !important;
+  font-weight: 700 !important;
+  color: var(--primary, var(--primary-color, var(--primary, #9b1c1c))) !important;
+}
+
+.index-products-section .sams-catalog-btn {
+  background: var(--primary, var(--primary-color, var(--primary, #9b1c1c))) !important;
+  color: #fff !important;
+  padding: 14px 20px !important;
+  font-size: 1.0625rem !important;
+  font-weight: 700 !important;
+  border-radius: 12px !important;
+}
+
+@media (max-width: 1024px) {
+#index-products-section #zappy-auto-grid-1782042137918-wqzdcd.sams-catalog-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+}
+
+@media (max-width: 600px) {
+#index-products-section #zappy-auto-grid-1782042137918-wqzdcd.sams-catalog-grid {
   grid-template-columns: 1fr !important;
 }
 }

@@ -1066,6 +1066,235 @@ window.onload = function() {
 })();
 /* ZAPPY_CUSTOM_JS_END:40448327523d */
 
+/* ZAPPY_CUSTOM_JS_START:b789d7feb97b */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function () {
+  function run() {
+    var detail = document.getElementById('productDetail');
+    if (!detail) return;
+
+    var MODELS = [
+      {
+        key: 'C-PRO',
+        name: 'C-PRO',
+        desc: 'קלנועית זוגית מרווחת – חוויית נסיעה משותפת בבטיחות ונוחות מקסימלית.',
+        price: 'מחיר: צרו קשר לקבלת הצעת מחיר',
+        why: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        specs: ['צרו קשר לקבלת המפרט הטכני המלא של הדגם'],
+        acc: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        warranty: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        financing: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        images: ['assets/site-dual-seat-scooter-1783333040005-yfrrfn.webp', 'assets/site-single-seat-scooter-1782677149136-ofyoz4.webp', 'assets/site-premium-scooter-1782677067827-n0nj3r.webp', 'assets/attached-1782930251822-j702n7.webp']
+      },
+      {
+        key: 'C',
+        name: 'C',
+        desc: 'קלנועית אישית קומפקטית ונוחה לניידות יומיומית עצמאית, עם סל קדמי מרווח.',
+        price: 'מחיר: צרו קשר לקבלת הצעת מחיר',
+        why: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        specs: ['צרו קשר לקבלת המפרט הטכני המלא של הדגם'],
+        acc: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        warranty: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        financing: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        images: ['assets/site-single-seat-scooter-1782677149136-ofyoz4.webp', 'assets/site-dual-seat-scooter-1783333040005-yfrrfn.webp', 'assets/site-premium-scooter-1782677067827-n0nj3r.webp', 'assets/attached-1782930251822-j702n7.webp']
+      },
+      {
+        key: 'G1',
+        name: 'G1',
+        desc: 'קלנועית פרימיום מתקדמת בעיצוב יוקרתי ומערכות בטיחות חכמות.',
+        price: 'מחיר: צרו קשר לקבלת הצעת מחיר',
+        why: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        specs: ['צרו קשר לקבלת המפרט הטכני המלא של הדגם'],
+        acc: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        warranty: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        financing: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        images: ['assets/site-premium-scooter-1782677067827-n0nj3r.webp', 'assets/site-dual-seat-scooter-1783333040005-yfrrfn.webp', 'assets/site-single-seat-scooter-1782677149136-ofyoz4.webp', 'assets/attached-1782930251822-j702n7.webp']
+      },
+      {
+        key: 'CARRO-ON',
+        name: 'Carro On',
+        desc: 'קלנועית מתקפלת קלה במיוחד, נוחה להכנסה לרכב – חופש תנועה בכל מקום.',
+        price: 'מחיר: צרו קשר לקבלת הצעת מחיר',
+        why: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        specs: ['צרו קשר לקבלת המפרט הטכני המלא של הדגם'],
+        acc: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        warranty: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        financing: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        images: ['assets/attached-1782930251822-j702n7.webp', 'assets/site-single-seat-scooter-1782677149136-ofyoz4.webp', 'assets/site-dual-seat-scooter-1783333040005-yfrrfn.webp', 'assets/site-premium-scooter-1782677067827-n0nj3r.webp']
+      },
+      {
+        key: 'EFOLDI',
+        name: 'Efoldi',
+        desc: 'קלנועית מתקפלת חזקה ואמינה עם מנגנון קיפול פשוט לשימוש יום-יומי.',
+        price: 'מחיר: צרו קשר לקבלת הצעת מחיר',
+        why: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        specs: ['צרו קשר לקבלת המפרט הטכני המלא של הדגם'],
+        acc: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        warranty: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        financing: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        images: ['assets/attached-1782930326382-h522xw.webp', 'assets/site-single-seat-scooter-1782677149136-ofyoz4.webp', 'assets/site-dual-seat-scooter-1783333040005-yfrrfn.webp', 'assets/attached-1782930251822-j702n7.webp']
+      },
+      {
+        key: 'GB149',
+        name: 'GB149',
+        desc: 'עיצוב מתקדם ונוחות מקסימלית, עם מושב מרופד ושליטה נוחה בנהיגה.',
+        price: 'מחיר: צרו קשר לקבלת הצעת מחיר',
+        why: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        specs: ['צרו קשר לקבלת המפרט הטכני המלא של הדגם'],
+        acc: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        warranty: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        financing: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        images: ['assets/attached-1782921096026-otqdkg.webp', 'assets/site-single-seat-scooter-1782677149136-ofyoz4.webp', 'assets/site-dual-seat-scooter-1783333040005-yfrrfn.webp', 'assets/attached-1782930251822-j702n7.webp']
+      },
+      {
+        key: 'GB148',
+        name: 'GB148',
+        desc: 'קלנועית מתקפלת קלת משקל, נכנסת לכל תא מטען – אידיאלית לטיולים.',
+        price: 'מחיר: צרו קשר לקבלת הצעת מחיר',
+        why: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        specs: ['צרו קשר לקבלת המפרט הטכני המלא של הדגם'],
+        acc: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        warranty: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        financing: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        images: ['assets/image-mobility-solutions-scooters-media-upload-upload-1787083098299-zog9ql.webp', 'assets/site-single-seat-scooter-1782677149136-ofyoz4.webp', 'assets/site-dual-seat-scooter-1783333040005-yfrrfn.webp', 'assets/attached-1782930251822-j702n7.webp']
+      },
+      {
+        key: 'GB147',
+        name: 'GB147',
+        desc: 'קלנועית מתקפלת קומפקטית ונוחה, קלה לתפעול ולתמרון.',
+        price: 'מחיר: צרו קשר לקבלת הצעת מחיר',
+        why: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        specs: ['צרו קשר לקבלת המפרט הטכני המלא של הדגם'],
+        acc: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        warranty: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        financing: 'פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.',
+        images: ['assets/attached-1782930284043-b3sz50.webp', 'assets/site-single-seat-scooter-1782677149136-ofyoz4.webp', 'assets/site-dual-seat-scooter-1783333040005-yfrrfn.webp', 'assets/attached-1782930251822-j702n7.webp']
+      }
+    ];
+
+    function modelKeyOfCard(card) {
+      var attr = (card.getAttribute('data-model') || '').toUpperCase().replace(/\s+/g, '-');
+      var map = { 'C-PRO': 'C-PRO', 'C': 'C', 'G1': 'G1', 'CARRO-ON': 'CARRO-ON', 'EFOLDI': 'EFOLDI', 'GB149': 'GB149', 'GB148': 'GB148', 'GB147': 'GB147' };
+      return map[attr] || null;
+    }
+
+    function normalizeHrefKey(href) {
+      var m = href.match(/\/product-([a-z0-9-]+)/i);
+      if (!m) return null;
+      var slug = m[1].toLowerCase();
+      var map = {
+        'c-pro': 'C-PRO', 'c': 'C', 'g1': 'G1', 'carro-on': 'CARRO-ON',
+        'efoldi': 'EFOLDI', 'gb149': 'GB149', 'gb148': 'GB148', 'gb147': 'GB147'
+      };
+      return map[slug] || null;
+    }
+
+    function fill(detail, m) {
+      var nameEl = detail.querySelector('#productName') || detail.querySelector('.product-detail__name');
+      var priceEl = detail.querySelector('#productPrice') || detail.querySelector('.product-detail__price');
+      var descEl = detail.querySelector('#productDesc') || detail.querySelector('.product-detail__desc');
+      if (nameEl) nameEl.textContent = m.name;
+      if (priceEl) priceEl.textContent = m.price;
+      if (descEl) descEl.textContent = m.desc;
+
+      var whyEl = detail.querySelector('#productWhy');
+      if (whyEl) whyEl.textContent = m.why;
+      var accEl = detail.querySelector('#productAccessories');
+      if (accEl) accEl.textContent = m.acc;
+      var warEl = detail.querySelector('#productWarranty');
+      if (warEl) warEl.textContent = m.warranty;
+      var finEl = detail.querySelector('#productFinancing');
+      if (finEl) finEl.textContent = m.financing;
+
+      var specsEl = detail.querySelector('#productSpecs');
+      if (specsEl) {
+        specsEl.innerHTML = '';
+        m.specs.forEach(function (s) {
+          var li = document.createElement('li');
+          li.textContent = s;
+          specsEl.appendChild(li);
+        });
+      }
+
+      var mainImg = detail.querySelector('#productMainImage');
+      var thumbs = detail.querySelectorAll('.product-detail__thumb');
+      if (mainImg && m.images[0]) mainImg.src = m.images[0];
+
+      thumbs.forEach(function (t, i) {
+        if (m.images[i]) {
+          t.setAttribute('data-img', m.images[i]);
+          var img = t.querySelector('img');
+          if (img) { img.src = m.images[i]; }
+          t.classList.toggle('is-active', i === 0);
+        }
+      });
+    }
+
+    function showModel(key) {
+      var m = MODELS.find(function (x) { return x.key === key; });
+      if (!m || !detail) return;
+      fill(detail, m);
+      try { detail.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) { detail.scrollIntoView(); }
+    }
+
+    // Thumbnail swap (works regardless of model)
+    if (!detail.__thumbBound) {
+      detail.__thumbBound = true;
+      detail.addEventListener('click', function (e) {
+        var thumb = e.target.closest('.product-detail__thumb');
+        if (!thumb) return;
+        var src = thumb.getAttribute('data-img');
+        if (!src) return;
+        var mainImg = detail.querySelector('#productMainImage');
+        if (mainImg) mainImg.src = src;
+        detail.querySelectorAll('.product-detail__thumb').forEach(function (t) {
+          t.classList.toggle('is-active', t === thumb);
+        });
+      });
+    }
+
+    // Bind catalog buttons
+    document.querySelectorAll('.sams-catalog-btn').forEach(function (btn) {
+      if (btn.__bound) return;
+      btn.__bound = true;
+      var card = btn.closest('.sams-catalog-card');
+      var key = (card && modelKeyOfCard(card)) || normalizeHrefKey(btn.getAttribute('href') || '');
+      if (!key) return;
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        showModel(key);
+      });
+    });
+
+    // Support direct hash like #product-C-PRO on load
+    var hash = window.location.hash || '';
+    var hm = hash.match(/#product-(.+)/);
+    if (hm) {
+      var key2 = hm[1].toUpperCase().replace(/\s+/g, '-');
+      setTimeout(function () { showModel(key2); }, 300);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', run);
+  } else {
+    run();
+  }
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:b789d7feb97b */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){

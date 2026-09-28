@@ -1001,6 +1001,129 @@ window.onload = function() {
 })();
 /* ZAPPY_BLOCK_RUNTIME_END */
 
+/* ZAPPY_CUSTOM_JS_START:0394b6c741db */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function(){
+  var PRODUCTS = {
+    "C-PRO": { name:"C-PRO", image:"assets/site-dual-seat-scooter-1783333040005-yfrrfn.webp", thumbs:[], desc:"קלנועית זוגית מרווחת – חוויית נסיעה משותפת בבטיחות ונוחות מקסימלית.", special:"", specs:[], accessories:"", warranty:"", financing:"" },
+    "C": { name:"C", image:"assets/site-single-seat-scooter-1782677149136-ofyoz4.webp", thumbs:[], desc:"קלנועית אישית קומפקטית ונוחה לניידות יומיומית עצמאית, עם סל קדמי מרווח.", special:"", specs:[], accessories:"", warranty:"", financing:"" },
+    "G1": { name:"G1", image:"assets/site-premium-scooter-1782677067827-n0nj3r.webp", thumbs:[], desc:"קלנועית פרימיום מתקדמת בעיצוב יוקרתי ומערכות בטיחות חכמות.", special:"", specs:[], accessories:"", warranty:"", financing:"" },
+    "CARRO-ON": { name:"Carro On", image:"assets/attached-1782930251822-j702n7.webp", thumbs:[], desc:"קלנועית מתקפלת קלה במיוחד, נוחה להכנסה לרכב – חופש תנועה בכל מקום.", special:"", specs:[], accessories:"", warranty:"", financing:"" },
+    "EFOLDI": { name:"Efoldi", image:"assets/attached-1782930326382-h522xw.webp", thumbs:[], desc:"קלנועית מתקפלת חזקה ואמינה עם מנגנון קיפול פשוט לשימוש יום-יומי.", special:"", specs:[], accessories:"", warranty:"", financing:"" },
+    "GB149": { name:"GB149", image:"assets/attached-1782921096026-otqdkg.webp", thumbs:[], desc:"עיצוב מתקדם ונוחות מקסימלית, עם מושב מרופד ושליטה נוחה בנהיגה.", special:"", specs:[], accessories:"", warranty:"", financing:"" },
+    "GB148": { name:"GB148", image:"assets/image-mobility-solutions-scooters-media-upload-upload-1787083098299-zog9ql.webp", thumbs:[], desc:"קלנועית מתקפלת קלת משקל, נכנסת לכל תא מטען – אידיאלית לטיולים.", special:"", specs:[], accessories:"", warranty:"", financing:"" },
+    "GB147": { name:"GB147", image:"assets/attached-1782930284043-b3sz50.webp", thumbs:[], desc:"קלנועית מתקפלת קומפקטית ונוחה, קלה לתפעול ולתמרון.", special:"", specs:[], accessories:"", warranty:"", financing:"" }
+  };
+
+  var FALLBACK_SPECS = [
+    "צרו קשר לקבלת המפרט הטכני המלא של הדגם",
+    "דגם זמין להתרשמות באולם התצוגה שלנו"
+  ];
+  var FALLBACK_TEXT = "פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.";
+
+  var modal = document.getElementById('productDetailModal');
+  if (!modal) return;
+  var overlay = modal.querySelector('.product-detail-modal__overlay');
+  var closeBtn = modal.querySelector('.product-detail-modal__close');
+  var nameEl = document.getElementById('productName');
+  var priceEl = document.getElementById('productPrice');
+  var descEl = document.getElementById('productDesc');
+  var specialEl = document.getElementById('productSpecial');
+  var whyEl = document.getElementById('productWhy');
+  var specsEl = document.getElementById('productSpecs');
+  var accEl = document.getElementById('productAccessories');
+  var warEl = document.getElementById('productWarranty');
+  var finEl = document.getElementById('productFinancing');
+  var mainImg = document.getElementById('productMainImage');
+  var thumbsWrap = document.getElementById('productThumbs');
+
+  function open(product){
+    if (!product) return;
+    nameEl.textContent = product.name;
+    priceEl.textContent = 'מחיר: צרו קשר לקבלת הצעת מחיר';
+    descEl.textContent = product.desc;
+    specialEl.textContent = product.special || '';
+    whyEl.textContent = product.special || FALLBACK_TEXT;
+    accEl.textContent = product.accessories || FALLBACK_TEXT;
+    warEl.textContent = product.warranty || FALLBACK_TEXT;
+    finEl.textContent = product.financing || FALLBACK_TEXT;
+
+    var specs = (product.specs && product.specs.length) ? product.specs : FALLBACK_SPECS;
+    specsEl.innerHTML = '';
+    specs.forEach(function(s){ var li=document.createElement('li'); li.textContent=s; specsEl.appendChild(li); });
+
+    var imgs = [product.image];
+    if (product.thumbs && product.thumbs.length) imgs = imgs.concat(product.thumbs);
+    mainImg.src = imgs[0];
+    mainImg.alt = 'קלנועית ' + product.name;
+    thumbsWrap.innerHTML = '';
+    imgs.forEach(function(src, i){
+      var b = document.createElement('button');
+      b.className = 'product-detail-modal__thumb' + (i===0 ? ' is-active':'');
+      b.setAttribute('aria-label', 'תמונה ' + (i+1));
+      var img = document.createElement('img');
+      img.src = src; img.alt = product.name + ' תמונה ' + (i+1);
+      b.appendChild(img);
+      b.addEventListener('click', function(){
+        mainImg.src = src;
+        var all = thumbsWrap.querySelectorAll('.product-detail-modal__thumb');
+        all.forEach(function(x){ x.classList.remove('is-active'); });
+        b.classList.add('is-active');
+      });
+      thumbsWrap.appendChild(b);
+    });
+
+    document.getElementById('btnWa').href = 'https://wa.me/972526121871?text=' + encodeURIComponent('שלום, אשמח לקבל פרטים על קלנועית ' + product.name);
+    document.getElementById('btnTestDrive').href = '/contact?model=' + encodeURIComponent(product.name);
+    document.getElementById('btnQuote').href = '/contact?model=' + encodeURIComponent(product.name);
+
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close(){
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', close);
+  overlay.addEventListener('click', close);
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+
+  // Wire catalog "פרטים נוספים" buttons to open modal for the clicked card's model
+  document.querySelectorAll('.sams-catalog-card').forEach(function(card){
+    var btn = card.querySelector('.sams-catalog-btn');
+    if (!btn) return;
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      var model = card.getAttribute('data-model');
+      open(PRODUCTS[model] || PRODUCTS['C-PRO']);
+    });
+  });
+
+  // Support ?model= deep link on load
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var m = params.get('model');
+    if (m && PRODUCTS[m]) { window.addEventListener('load', function(){ open(PRODUCTS[m]); }); }
+  } catch(e){}
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:0394b6c741db */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){

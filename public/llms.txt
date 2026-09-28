@@ -18,6 +18,12 @@ https://samscooter.co.il/contact
 https://samscooter.co.il/thank-you
 תודה על פנייתך לסאמסקוטר. הודעתך התקבלה בהצלחה ונחזור אליך בהקדם עם ייעוץ מקצועי ושירות עד הבית.
 
+### Page
+https://samscooter.co.il/c-pro
+
+### Page
+https://samscooter.co.il/model-c
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -49,7 +55,7 @@ Information about WCAG compliance and accessibility features.
 - Fields:
   - `full_name` (text, required)
   - `phone` (tel, required)
-  - `privacy_consent` (checkbox, required)
+  - `privacy_consent` (checkbox)
 
 ---
 

@@ -9777,6 +9777,13 @@ html, body {
 #productDetail .product-detail__content { grid-template-columns: 1.1fr 1fr !important; }
 #productDetail .product-detail__content { gap: 36px !important; }
 
+
+#productDetail .product-detail__gallery-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 16px;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

@@ -1001,97 +1001,58 @@ window.onload = function() {
 })();
 /* ZAPPY_BLOCK_RUNTIME_END */
 
-/* ZAPPY_CUSTOM_JS_START:8054f0c4987b */
+/* ZAPPY_CUSTOM_JS_START:40448327523d */
 (function () {
   function __zappyCustomInit() {
     try {
 (function(){
   var PRODUCTS = {
-    "C-PRO": { name:"C-PRO", image:"assets/site-dual-seat-scooter-1783333040005-yfrrfn.webp", thumbs:[], desc:"קלנועית זוגית מרווחת – חוויית נסיעה משותפת בבטיחות ונוחות מקסימלית.", special:"", specs:[], accessories:"", warranty:"", financing:"" },
-    "C": { name:"C", image:"assets/site-single-seat-scooter-1782677149136-ofyoz4.webp", thumbs:[], desc:"קלנועית אישית קומפקטית ונוחה לניידות יומיומית עצמאית, עם סל קדמי מרווח.", special:"", specs:[], accessories:"", warranty:"", financing:"" },
-    "G1": { name:"G1", image:"assets/site-premium-scooter-1782677067827-n0nj3r.webp", thumbs:[], desc:"קלנועית פרימיום מתקדמת בעיצוב יוקרתי ומערכות בטיחות חכמות.", special:"", specs:[], accessories:"", warranty:"", financing:"" },
-    "CARRO-ON": { name:"Carro On", image:"assets/attached-1782930251822-j702n7.webp", thumbs:[], desc:"קלנועית מתקפלת קלה במיוחד, נוחה להכנסה לרכב – חופש תנועה בכל מקום.", special:"", specs:[], accessories:"", warranty:"", financing:"" },
-    "EFOLDI": { name:"Efoldi", image:"assets/attached-1782930326382-h522xw.webp", thumbs:[], desc:"קלנועית מתקפלת חזקה ואמינה עם מנגנון קיפול פשוט לשימוש יום-יומי.", special:"", specs:[], accessories:"", warranty:"", financing:"" },
-    "GB149": { name:"GB149", image:"assets/attached-1782921096026-otqdkg.webp", thumbs:[], desc:"עיצוב מתקדם ונוחות מקסימלית, עם מושב מרופד ושליטה נוחה בנהיגה.", special:"", specs:[], accessories:"", warranty:"", financing:"" },
-    "GB148": { name:"GB148", image:"assets/image-mobility-solutions-scooters-media-upload-upload-1787083098299-zog9ql.webp", thumbs:[], desc:"קלנועית מתקפלת קלת משקל, נכנסת לכל תא מטען – אידיאלית לטיולים.", special:"", specs:[], accessories:"", warranty:"", financing:"" },
-    "GB147": { name:"GB147", image:"assets/attached-1782930284043-b3sz50.webp", thumbs:[], desc:"קלנועית מתקפלת קומפקטית ונוחה, קלה לתפעול ולתמרון.", special:"", specs:[], accessories:"", warranty:"", financing:"" }
+    "C-PRO": { name:"C-PRO", image:"assets/site-dual-seat-scooter-1783333040005-yfrrfn.webp", desc:"קלנועית זוגית מרווחת – חוויית נסיעה משותפת בבטיחות ונוחות מקסימלית." },
+    "C": { name:"C", image:"assets/site-single-seat-scooter-1782677149136-ofyoz4.webp", desc:"קלנועית אישית קומפקטית ונוחה לניידות יומיומית עצמאית, עם סל קדמי מרווח." },
+    "G1": { name:"G1", image:"assets/site-premium-scooter-1782677067827-n0nj3r.webp", desc:"קלנועית פרימיום מתקדמת בעיצוב יוקרתי ומערכות בטיחות חכמות." },
+    "CARRO-ON": { name:"Carro On", image:"assets/attached-1782930251822-j702n7.webp", desc:"קלנועית מתקפלת קלה במיוחד, נוחה להכנסה לרכב – חופש תנועה בכל מקום." },
+    "EFOLDI": { name:"Efoldi", image:"assets/attached-1782930326382-h522xw.webp", desc:"קלנועית מתקפלת חזקה ואמינה עם מנגנון קיפול פשוט לשימוש יום-יומי." },
+    "GB149": { name:"GB149", image:"assets/attached-1782921096026-otqdkg.webp", desc:"עיצוב מתקדם ונוחות מקסימלית, עם מושב מרופד ושליטה נוחה בנהיגה." },
+    "GB148": { name:"GB148", image:"assets/image-mobility-solutions-scooters-media-upload-upload-1787083098299-zog9ql.webp", desc:"קלנועית מתקפלת קלת משקל, נכנסת לכל תא מטען – אידיאלית לטיולים." },
+    "GB147": { name:"GB147", image:"assets/attached-1782930284043-b3sz50.webp", desc:"קלנועית מתקפלת קומפקטית ונוחה, קלה לתפעול ולתמרון." }
   };
-
-  var FALLBACK_SPECS = [
-    "צרו קשר לקבלת המפרט הטכני המלא של הדגם",
-    "דגם זמין להתרשמות באולם התצוגה שלנו"
-  ];
-  var FALLBACK_TEXT = "פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.";
 
   var detail = document.getElementById('productDetail');
   if (!detail) return;
-  var nameEl = document.getElementById('productName');
-  var priceEl = document.getElementById('productPrice');
-  var descEl = document.getElementById('productDesc');
-  var whyEl = document.getElementById('productWhy');
-  var specsEl = document.getElementById('productSpecs');
-  var accEl = document.getElementById('productAccessories');
-  var warEl = document.getElementById('productWarranty');
-  var finEl = document.getElementById('productFinancing');
   var mainImg = document.getElementById('productMainImage');
-  var thumbsWrap = document.getElementById('productThumbs');
+  var nameEl = document.getElementById('productName');
+  var descEl = document.getElementById('productDesc');
 
-  function render(product){
-    if (!product) return;
-    nameEl.textContent = product.name;
-    priceEl.textContent = 'מחיר: צרו קשר לקבלת הצעת מחיר';
-    descEl.textContent = product.desc;
-    whyEl.textContent = product.special || FALLBACK_TEXT;
-    accEl.textContent = product.accessories || FALLBACK_TEXT;
-    warEl.textContent = product.warranty || FALLBACK_TEXT;
-    finEl.textContent = product.financing || FALLBACK_TEXT;
-
-    var specs = (product.specs && product.specs.length) ? product.specs : FALLBACK_SPECS;
-    specsEl.innerHTML = '';
-    specs.forEach(function(s){ var li=document.createElement('li'); li.textContent=s; specsEl.appendChild(li); });
-
-    var imgs = [product.image].concat(product.thumbs || []);
-    mainImg.src = imgs[0];
-    mainImg.alt = 'קלנועית ' + product.name;
-    thumbsWrap.innerHTML = '';
-    imgs.forEach(function(src, i){
-      var b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'product-detail__thumb' + (i===0 ? ' is-active':'');
-      b.setAttribute('aria-label', 'תמונה ' + (i+1));
-      var img = document.createElement('img');
-      img.src = src; img.alt = product.name + ' תמונה ' + (i+1);
-      b.appendChild(img);
-      b.addEventListener('click', function(){
-        mainImg.src = src;
-        thumbsWrap.querySelectorAll('.product-detail__thumb').forEach(function(x){ x.classList.remove('is-active'); });
-        b.classList.add('is-active');
-      });
-      thumbsWrap.appendChild(b);
+  // Thumbnail swap (works on hardcoded buttons)
+  var thumbs = detail.querySelectorAll('.product-detail__thumb');
+  thumbs.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      if (mainImg) mainImg.src = btn.getAttribute('data-img');
+      thumbs.forEach(function(x){ x.classList.remove('is-active'); });
+      btn.classList.add('is-active');
     });
+  });
 
-    var waText = encodeURIComponent('שלום, אשמח לקבל פרטים על קלנועית ' + product.name);
-    document.getElementById('btnWa').href = 'https://wa.me/972526121871?text=' + waText;
-    var q = '?model=' + encodeURIComponent(product.name);
-    document.getElementById('btnTestDrive').href = '/contact' + q;
-    document.getElementById('btnQuote').href = '/contact' + q;
-
-    detail.scrollIntoView({behavior:'smooth', block:'start'});
-  }
-
-  // Wire catalog buttons
+  // Catalog "פרטים נוספים" → update name/image/description + scroll to panel
   document.querySelectorAll('.sams-catalog-card').forEach(function(card){
     var btn = card.querySelector('.sams-catalog-btn');
     if (!btn) return;
     btn.addEventListener('click', function(e){
       e.preventDefault();
       var model = card.getAttribute('data-model');
-      render(PRODUCTS[model] || PRODUCTS['C-PRO']);
+      var p = PRODUCTS[model];
+      if (!p) return;
+      if (nameEl) nameEl.textContent = p.name;
+      if (descEl) descEl.textContent = p.desc;
+      if (mainImg) { mainImg.src = p.image; mainImg.alt = 'קלנועית ' + p.name; }
+      // set first thumbnail to the product's own image and activate it
+      var firstThumb = detail.querySelector('.product-detail__thumb');
+      if (firstThumb) { firstThumb.setAttribute('data-img', p.image); firstThumb.querySelector('img').src = p.image; }
+      thumbs.forEach(function(x){ x.classList.remove('is-active'); });
+      if (firstThumb) firstThumb.classList.add('is-active');
+      detail.scrollIntoView({behavior:'smooth', block:'start'});
     });
   });
-
-  // Show default model (C-PRO) on load as a live preview
-  render(PRODUCTS['C-PRO']);
 })();
     } catch (e) {
       if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
@@ -1103,7 +1064,7 @@ window.onload = function() {
     __zappyCustomInit();
   }
 })();
-/* ZAPPY_CUSTOM_JS_END:8054f0c4987b */
+/* ZAPPY_CUSTOM_JS_END:40448327523d */
 
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */

@@ -8999,6 +8999,109 @@ html, body {
   height: 320px !important;
 }
 }
+
+.home-hero-slider-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.home-hero-slider-section .hhero-slider {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.home-hero-slider-section .hhero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.home-hero-slider-section .hhero-slide.hhero-slide--active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.home-hero-slider-section .hhero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home-hero-slider-section .hhero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.home-hero-slider-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+.home-hero-slider-section .hhero-headline {
+  color: var(--background-color, var(--background, var(--bg-light, #ffffff)));
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.home-hero-slider-section .hhero-subtitle {
+  color: var(--background-color, var(--background, var(--bg-light, #ffffff)));
+  font-size: 1.375rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.home-hero-slider-section .hhero-cta {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 16px 40px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+.home-hero-slider-section .hhero-cta:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+.home-hero-slider-section {
+  min-height: 78vh;
+}
+
+.home-hero-slider-section .hhero-headline {
+  font-size: 2rem;
+}
+
+.home-hero-slider-section .hhero-subtitle {
+  font-size: 1.125rem;
+}
+
+.home-hero-slider-section .hhero-cta {
+  padding: 14px 28px;
+  font-size: 1rem;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
@@ -9258,7 +9361,17 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   .navbar .sub-menu.mobile-expanded,
   .zappy-products-dropdown > .sub-menu.mobile-expanded,
   .nav-menu.active .zappy-products-dropdown > .sub-menu.mobile-expanded,
-  .nav-menu.active .zappy-products-dropdown .sub-menu.mobile-expanded {
+  .nav-menu.active .zappy-products-dropdown .sub-menu.mobile-expanded,
+  /* Hover/focus-within hide is (1,2,1). The plain .mobile-expanded
+     rule is only (1,2,0), so a tap that leaves the row hovered or
+     focused keeps the opened submenu at display:none. These selectors
+     are (1,3,1) and win. */
+  #navMenu li:hover > .sub-menu.mobile-expanded,
+  #navMenu li:focus-within > .sub-menu.mobile-expanded,
+  .nav-menu li:hover > .sub-menu.mobile-expanded,
+  .nav-menu li:focus-within > .sub-menu.mobile-expanded,
+  .navbar li:hover > .sub-menu.mobile-expanded,
+  .navbar li:focus-within > .sub-menu.mobile-expanded {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -9273,6 +9386,35 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     right: auto !important;
     top: auto !important;
     float: none !important;
+  }
+}
+
+
+/* ZAPPY_OPEN_MOBILE_NAV_VISIBLE_V1 */
+/* Beat baked ".navbar #navMenu.nav-menu { opacity:0; visibility:hidden; max-height:0 }"
+   which still matches the open drawer. */
+@media (max-width: 768px) {
+  .navbar #navMenu.nav-menu.active,
+  .navbar #navMenu.nav-menu.open,
+  nav.navbar #navMenu.nav-menu.active,
+  nav.navbar #navMenu.nav-menu.open,
+  html body .navbar #navMenu.nav-menu.active,
+  html body .navbar #navMenu.nav-menu.open,
+  html[dir="rtl"] body .navbar #navMenu.nav-menu.active,
+  html[lang="he"] body .navbar #navMenu.nav-menu.active,
+  html[lang="ar"] body .navbar #navMenu.nav-menu.active,
+  html[dir="rtl"] body .navbar #navMenu.nav-menu.open,
+  html[lang="he"] body .navbar #navMenu.nav-menu.open,
+  html[lang="ar"] body .navbar #navMenu.nav-menu.open {
+    display: flex !important;
+    flex-direction: column !important;
+    max-height: calc(100dvh - var(--zappy-mobile-menu-top, var(--total-header-height, var(--zappy-navbar-bottom, 70px)))) !important;
+    height: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    pointer-events: auto !important;
   }
 }
 

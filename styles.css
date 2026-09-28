@@ -9102,6 +9102,118 @@ html, body {
   font-size: 1rem;
 }
 }
+
+.sams-catalog-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+#zappy-auto-grid-1782042137918-wqzdcd .sams-catalog-card {
+  background: var(--background-color, var(--background, var(--bg-light, #ffffff)));
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#zappy-auto-grid-1782042137918-wqzdcd .sams-catalog-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: #f3e8e8;
+}
+
+#zappy-auto-grid-1782042137918-wqzdcd .sams-catalog-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#zappy-auto-grid-1782042137918-wqzdcd .sams-catalog-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+#zappy-auto-grid-1782042137918-wqzdcd .sams-catalog-model {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+#zappy-auto-grid-1782042137918-wqzdcd .sams-catalog-desc {
+  font-size: 1.0625rem;
+  color: var(--text-dark);
+  line-height: 1.55;
+  margin: 0;
+  flex: 1;
+}
+
+#zappy-auto-grid-1782042137918-wqzdcd .sams-catalog-price {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
+}
+
+#zappy-auto-grid-1782042137918-wqzdcd .sams-catalog-btn {
+  display: inline-block;
+  text-align: center;
+  background: var(--primary);
+  color: #fff;
+  padding: 14px 20px;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+.sams-catalog-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (max-width: 600px) {
+.sams-catalog-grid {
+  grid-template-columns: 1fr;
+}
+}
+
+.index-products-section .sams-catalog-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px !important;
+}
+
+.index-products-section .sams-catalog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.14);
+}
+
+.index-products-section .sams-catalog-btn:hover {
+  background: var(--accent);
+}
+
+@media (max-width: 1024px) {
+.index-products-section .sams-catalog-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+}
+
+@media (max-width: 600px) {
+.index-products-section .sams-catalog-grid {
+  grid-template-columns: 1fr !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

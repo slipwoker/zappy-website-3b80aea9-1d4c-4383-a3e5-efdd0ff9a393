@@ -1001,7 +1001,7 @@ window.onload = function() {
 })();
 /* ZAPPY_BLOCK_RUNTIME_END */
 
-/* ZAPPY_CUSTOM_JS_START:0394b6c741db */
+/* ZAPPY_CUSTOM_JS_START:8054f0c4987b */
 (function () {
   function __zappyCustomInit() {
     try {
@@ -1023,14 +1023,11 @@ window.onload = function() {
   ];
   var FALLBACK_TEXT = "פרטים מלאים זמינים בטלפון או בוואטסאפ – דברו איתנו.";
 
-  var modal = document.getElementById('productDetailModal');
-  if (!modal) return;
-  var overlay = modal.querySelector('.product-detail-modal__overlay');
-  var closeBtn = modal.querySelector('.product-detail-modal__close');
+  var detail = document.getElementById('productDetail');
+  if (!detail) return;
   var nameEl = document.getElementById('productName');
   var priceEl = document.getElementById('productPrice');
   var descEl = document.getElementById('productDesc');
-  var specialEl = document.getElementById('productSpecial');
   var whyEl = document.getElementById('productWhy');
   var specsEl = document.getElementById('productSpecs');
   var accEl = document.getElementById('productAccessories');
@@ -1039,12 +1036,11 @@ window.onload = function() {
   var mainImg = document.getElementById('productMainImage');
   var thumbsWrap = document.getElementById('productThumbs');
 
-  function open(product){
+  function render(product){
     if (!product) return;
     nameEl.textContent = product.name;
     priceEl.textContent = 'מחיר: צרו קשר לקבלת הצעת מחיר';
     descEl.textContent = product.desc;
-    specialEl.textContent = product.special || '';
     whyEl.textContent = product.special || FALLBACK_TEXT;
     accEl.textContent = product.accessories || FALLBACK_TEXT;
     warEl.textContent = product.warranty || FALLBACK_TEXT;
@@ -1054,63 +1050,48 @@ window.onload = function() {
     specsEl.innerHTML = '';
     specs.forEach(function(s){ var li=document.createElement('li'); li.textContent=s; specsEl.appendChild(li); });
 
-    var imgs = [product.image];
-    if (product.thumbs && product.thumbs.length) imgs = imgs.concat(product.thumbs);
+    var imgs = [product.image].concat(product.thumbs || []);
     mainImg.src = imgs[0];
     mainImg.alt = 'קלנועית ' + product.name;
     thumbsWrap.innerHTML = '';
     imgs.forEach(function(src, i){
       var b = document.createElement('button');
-      b.className = 'product-detail-modal__thumb' + (i===0 ? ' is-active':'');
+      b.type = 'button';
+      b.className = 'product-detail__thumb' + (i===0 ? ' is-active':'');
       b.setAttribute('aria-label', 'תמונה ' + (i+1));
       var img = document.createElement('img');
       img.src = src; img.alt = product.name + ' תמונה ' + (i+1);
       b.appendChild(img);
       b.addEventListener('click', function(){
         mainImg.src = src;
-        var all = thumbsWrap.querySelectorAll('.product-detail-modal__thumb');
-        all.forEach(function(x){ x.classList.remove('is-active'); });
+        thumbsWrap.querySelectorAll('.product-detail__thumb').forEach(function(x){ x.classList.remove('is-active'); });
         b.classList.add('is-active');
       });
       thumbsWrap.appendChild(b);
     });
 
-    document.getElementById('btnWa').href = 'https://wa.me/972526121871?text=' + encodeURIComponent('שלום, אשמח לקבל פרטים על קלנועית ' + product.name);
-    document.getElementById('btnTestDrive').href = '/contact?model=' + encodeURIComponent(product.name);
-    document.getElementById('btnQuote').href = '/contact?model=' + encodeURIComponent(product.name);
+    var waText = encodeURIComponent('שלום, אשמח לקבל פרטים על קלנועית ' + product.name);
+    document.getElementById('btnWa').href = 'https://wa.me/972526121871?text=' + waText;
+    var q = '?model=' + encodeURIComponent(product.name);
+    document.getElementById('btnTestDrive').href = '/contact' + q;
+    document.getElementById('btnQuote').href = '/contact' + q;
 
-    modal.classList.add('is-open');
-    modal.setAttribute('aria-hidden','false');
-    document.body.style.overflow = 'hidden';
+    detail.scrollIntoView({behavior:'smooth', block:'start'});
   }
 
-  function close(){
-    modal.classList.remove('is-open');
-    modal.setAttribute('aria-hidden','true');
-    document.body.style.overflow = '';
-  }
-
-  closeBtn.addEventListener('click', close);
-  overlay.addEventListener('click', close);
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
-
-  // Wire catalog "פרטים נוספים" buttons to open modal for the clicked card's model
+  // Wire catalog buttons
   document.querySelectorAll('.sams-catalog-card').forEach(function(card){
     var btn = card.querySelector('.sams-catalog-btn');
     if (!btn) return;
     btn.addEventListener('click', function(e){
       e.preventDefault();
       var model = card.getAttribute('data-model');
-      open(PRODUCTS[model] || PRODUCTS['C-PRO']);
+      render(PRODUCTS[model] || PRODUCTS['C-PRO']);
     });
   });
 
-  // Support ?model= deep link on load
-  try {
-    var params = new URLSearchParams(window.location.search);
-    var m = params.get('model');
-    if (m && PRODUCTS[m]) { window.addEventListener('load', function(){ open(PRODUCTS[m]); }); }
-  } catch(e){}
+  // Show default model (C-PRO) on load as a live preview
+  render(PRODUCTS['C-PRO']);
 })();
     } catch (e) {
       if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
@@ -1122,7 +1103,7 @@ window.onload = function() {
     __zappyCustomInit();
   }
 })();
-/* ZAPPY_CUSTOM_JS_END:0394b6c741db */
+/* ZAPPY_CUSTOM_JS_END:8054f0c4987b */
 
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */

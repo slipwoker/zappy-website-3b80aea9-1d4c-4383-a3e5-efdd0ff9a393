@@ -896,6 +896,47 @@ window.onload = function() {
 })();
 /* ZAPPY_CUSTOM_JS_END:633c8cd0841a */
 
+/* ZAPPY_CUSTOM_JS_START:0f00ca938e21 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function() {
+  // SAMSCOOTER hero slider auto-rotation (every 5 seconds)
+  var slider = document.querySelector('.home-hero-slider-section #sams-hero-slider, .home-hero-slider-section .hhero-slider');
+  if (!slider) return;
+
+  var slides = slider.querySelectorAll('.hhero-slide');
+  if (slides.length < 2) return;
+
+  var current = 0;
+  var interval = 5000; // 5 seconds
+
+  function showSlide(index) {
+    slides.forEach(function(slide, i) {
+      slide.classList.toggle('hhero-slide--active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }
+
+  // Auto-rotate every 5 seconds
+  setInterval(nextSlide, interval);
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:0f00ca938e21 */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){

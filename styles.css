@@ -10386,6 +10386,23 @@ html, body {
   padding: 18px 44px !important;
 }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.index-products-section {
+  scroll-margin-top: 96px;
+}
+
+@media (max-width: 768px) {
+.index-products-section {
+  scroll-margin-top: 80px;
+}
+}
+/* zappy-self-heal */
+.index-products-section { scroll-margin-top: 96px !important; }
+
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

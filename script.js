@@ -1113,6 +1113,27 @@ window.onload = function() {
 })();
 /* ZAPPY_CUSTOM_JS_END:4748f5aebd2f */
 
+/* ZAPPY_CUSTOM_JS_START:763d56468aa5 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.sams-product-page .spp-btn').forEach(function(b){
+    b.style.setProperty('color', '#ffffff', 'important');
+  });
+});
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:763d56468aa5 */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){

@@ -1266,6 +1266,47 @@ document.addEventListener('DOMContentLoaded', function () {
 })();
 /* ZAPPY_CUSTOM_JS_END:2b59b6b362c2 */
 
+/* ZAPPY_CUSTOM_JS_START:ce018a56e4c0 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function () {
+  // Smooth-scroll to a #hash anchor after page load (covers cross-page navigation
+  // from model pages, where the browser lands at the top and needs to glide down).
+  function scrollToHash() {
+    var hash = window.location.hash;
+    if (!hash || hash.length < 2) return;
+    var target = null;
+    try {
+      target = document.querySelector(hash);
+    } catch (e) { return; }
+    if (!target) return;
+    // Let the layout settle, then glide to the target with the navbar offset respected.
+    requestAnimationFrame(function () {
+      setTimeout(function () {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 80);
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', scrollToHash);
+  } else {
+    scrollToHash();
+  }
+  window.addEventListener('hashchange', scrollToHash);
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:ce018a56e4c0 */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){

@@ -1187,6 +1187,85 @@ document.addEventListener('DOMContentLoaded', function () {
 })();
 /* ZAPPY_CUSTOM_JS_END:4de7f9f580f8 */
 
+/* ZAPPY_CUSTOM_JS_START:2b59b6b362c2 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function () {
+  var slider = document.querySelector('#sams-hero-slider');
+  if (!slider) return;
+  var section = slider.closest('.home-hero-slider-section');
+  if (!section) return;
+
+  var slides = Array.prototype.slice.call(slider.querySelectorAll('.hhero-slide'));
+  var dots = Array.prototype.slice.call(section.querySelectorAll('.hhero-dot'));
+  if (slides.length === 0) return;
+
+  var current = 0;
+  var intervalMs = 5000;
+  var timer = null;
+
+  function showSlide(index) {
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+    current = index;
+    slides.forEach(function (s, i) {
+      if (i === current) {
+        s.classList.add('hhero-slide--active');
+      } else {
+        s.classList.remove('hhero-slide--active');
+      }
+    });
+    dots.forEach(function (d, i) {
+      if (i === current) {
+        d.classList.add('hhero-dot--active');
+      } else {
+        d.classList.remove('hhero-dot--active');
+      }
+    });
+  }
+
+  function nextSlide() {
+    showSlide(current + 1);
+  }
+
+  function start() {
+    stop();
+    timer = setInterval(nextSlide, intervalMs);
+  }
+
+  function stop() {
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+  }
+
+  dots.forEach(function (dot) {
+    dot.addEventListener('click', function () {
+      var idx = parseInt(dot.getAttribute('data-slide'), 10);
+      if (!isNaN(idx)) {
+        showSlide(idx);
+        start();
+      }
+    });
+  });
+
+  showSlide(0);
+  start();
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:2b59b6b362c2 */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){

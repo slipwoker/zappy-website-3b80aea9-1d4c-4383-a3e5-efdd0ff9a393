@@ -10403,6 +10403,94 @@ html {
 /* zappy-self-heal */
 .index-products-section { scroll-margin-top: 96px !important; }
 
+
+.home-hero-slider-section .hhero-slider {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.home-hero-slider-section .hhero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s ease-in-out, visibility 1.2s ease-in-out;
+}
+
+.home-hero-slider-section .hhero-slide.hhero-slide--active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+.home-hero-slider-section .hhero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.home-hero-slider-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.home-hero-slider-section .hhero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.home-hero-slider-section .hhero-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+  position: relative;
+  z-index: 3;
+}
+
+.home-hero-slider-section .hhero-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.45);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.home-hero-slider-section .hhero-dot:hover {
+  background: rgba(255, 255, 255, 0.75);
+  transform: scale(1.15);
+}
+
+.home-hero-slider-section .hhero-dot.hhero-dot--active {
+  background: var(--background-color, var(--background, var(--bg-light, #ffffff)));
+  transform: scale(1.35);
+}
+
+@media (max-width: 768px) {
+.home-hero-slider-section .hhero-slider {
+  height: 100%;
+}
+
+.home-hero-slider-section .hhero-dots {
+  margin-top: 20px;
+  gap: 8px;
+}
+}
+/* zappy-self-heal */
+.home-hero-slider-section .hhero-dots { gap: 10px !important; }
+.home-hero-slider-section .hhero-dots { margin-top: 28px !important; }
+
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

@@ -1982,6 +1982,26 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 .spp-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:99999;cursor:zoom-out}
 .spp-lightbox.open{display:flex}
 .spp-lightbox img{max-width:90vw;max-height:90vh;border-radius:8px}
+.spp-spec-table table{width:100%;border-collapse:collapse;margin-top:8px}
+.spp-spec-table th,.spp-spec-table td{padding:14px 18px;border-bottom:1px solid #f0e0e0;text-align:right;font-size:1rem;vertical-align:top}
+.spp-spec-table th{width:34%;color:#9b1c1c;font-weight:700}
+.spp-spec-table td{color:#1a1a1a}
+.spp-spec-table tr:last-child th,.spp-spec-table tr:last-child td{border-bottom:none}
+.spp-warranty{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:8px}
+.spp-warranty-col{background:#f9f4f4;border-radius:14px;padding:24px}
+.spp-warranty-col h3{font-size:1.15rem;font-weight:800;color:#9b1c1c;margin-bottom:14px}
+.spp-warranty-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.spp-warranty-col li{color:#1a1a1a;line-height:1.6;padding-inline-start:22px;position:relative}
+.spp-warranty-col li::before{content:"✓";position:absolute;inset-inline-start:0;color:#c0392b;font-weight:800}
+.spp-contact-form{max-width:640px;margin:8px auto 0;text-align:right}
+.spp-contact-form .spp-form-row{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.spp-contact-form label{font-weight:700;color:#1a1a1a;font-size:.95rem}
+.spp-contact-form input[type=text],.spp-contact-form input[type=tel]{padding:14px 16px;border:2px solid #e5e7eb;border-radius:12px;font-size:1rem;font-family:inherit;color:#1a1a1a;background:#f9f4f4;width:100%;box-sizing:border-box}
+.spp-contact-form input:focus{border-color:#9b1c1c;outline:none;box-shadow:0 0 0 4px rgba(155,28,28,.1)}
+.spp-contact-form .spp-submit{background:#9b1c1c;color:#fff;padding:16px 32px;font-size:1.1rem;font-weight:700;border:none;border-radius:999px;cursor:pointer;transition:background .3s ease;width:100%}
+.spp-contact-form .spp-submit:hover{background:#c0392b}
+.spp-model-hidden{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+@media(max-width:768px){.spp-warranty{grid-template-columns:1fr}}
 .spp-faq-item{border:1px solid #e5e7eb;border-radius:12px;margin-bottom:12px;overflow:hidden}
 .spp-faq-question{width:100%;text-align:right;padding:18px 20px;background:#f9f4f4;border:none;font-size:1.05rem;font-weight:700;color:#1a1a1a;cursor:pointer}
 .spp-faq-answer{padding:0 20px;display:none}

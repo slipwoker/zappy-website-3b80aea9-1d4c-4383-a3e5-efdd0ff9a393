@@ -1939,12 +1939,74 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 </script>
   
   <main id="main">
-      <section id="layout-1790594114855" class="py-16 md:py-24 bg-white layout-section zappy-removable" data-zappy-component="true" style="width: 100%; padding: 60px 0;">
-        <div class="container mx-auto px-4 md:px-8 text-center">
-          <h1 class="text-3xl md:text-4xl font-bold mb-4">GB149</h1>
-          <p class="text-gray-600 text-lg">This page is ready for your content.</p>
+      <style>
+.sams-product-page{background:#fff;color:#1a1a1a;padding:48px 16px 80px;direction:rtl}
+.spp-container{max-width:1200px;margin:0 auto}
+.spp-breadcrumb{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:.9rem;color:#6b7280;margin-bottom:20px}
+.spp-breadcrumb a{color:#9b1c1c;text-decoration:none;font-weight:600}
+.spp-breadcrumb a:hover{text-decoration:underline}
+.spp-breadcrumb .spp-sep{color:#6b7280}
+.spp-breadcrumb .spp-current{color:#1a1a1a;font-weight:600}
+.spp-back-link{display:inline-flex;align-items:center;gap:6px;margin-bottom:28px;color:#9b1c1c;text-decoration:none;font-weight:700;font-size:1rem}
+.spp-back-link:hover{text-decoration:underline}
+.spp-top{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.spp-main-image{border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.18)}
+.spp-main-image img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.spp-name{font-size:2.75rem;font-weight:800;margin-bottom:12px;color:#1a1a1a}
+.spp-desc{font-size:1.125rem;color:#4b5563;line-height:1.7;margin-bottom:20px}
+.spp-benefits{margin:20px 0;display:flex;flex-direction:column;gap:10px}
+.spp-benefit{display:flex;align-items:center;gap:10px;padding:14px 16px;background:#f9f4f4;border-radius:12px;font-weight:600;color:#1a1a1a}
+.spp-benefit::before{content:"✔";color:#c0392b;font-weight:800}
+.spp-price{font-size:1.75rem;font-weight:800;color:#9b1c1c;margin:20px 0}
+.spp-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.spp-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none;transition:all .3s ease;border:none;cursor:pointer}
+.spp-btn-consult{background:#9b1c1c;color:#fff;box-shadow:0 4px 12px rgba(155,28,28,.25)}
+.spp-btn-consult:hover{background:#c0392b;transform:translateY(-2px)}
+.spp-btn-whatsapp{background:#25D366;color:#fff;box-shadow:0 4px 12px rgba(37,211,102,.25)}
+.spp-btn-whatsapp:hover{background:#1ebe5b;transform:translateY(-2px)}
+.spp-section{margin-top:48px;padding-top:32px;border-top:1px solid #e5e7eb}
+.spp-section h2{font-size:1.75rem;font-weight:800;color:#1a1a1a;margin-bottom:16px}
+.spp-section-text{color:#4b5563;line-height:1.8;font-size:1.05rem}
+.spp-spec-table ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.spp-spec-table li{padding:14px 16px;background:#f9f4f4;border-radius:10px;color:#1a1a1a}
+.spp-spec-table li span{font-weight:700;color:#9b1c1c}
+@media(max-width:768px){.spp-top{grid-template-columns:1fr;gap:24px}.spp-name{font-size:2rem}.spp-spec-table ul{grid-template-columns:1fr}}
+</style>
+<section class="sams-product-page" dir="rtl">
+  <div class="spp-container">
+    <nav class="spp-breadcrumb" aria-label="ניווט">
+      <a href="/">דף הבית</a><span class="spp-sep">›</span>
+      <a href="/#index-products-section">הקלנועיות שלנו</a><span class="spp-sep">›</span>
+      <span class="spp-current">GB149</span>
+    </nav>
+    <a href="/#index-products-section" class="spp-back-link">← חזרה לכל הדגמים</a>
+    <div class="spp-top">
+      <div class="spp-main-image"><img src="/assets/attached-1782921096026-otqdkg.webp?v=1782921098658" alt="קלנועית מתקפלת GB149" loading="lazy" decoding="async" fetchpriority="low"></div>
+      <div class="spp-info">
+        <h1 class="spp-name">GB149</h1>
+        <p class="spp-desc">עיצוב מתקדם ונוחות מקסימלית, עם מושב מרופד ושליטה נוחה בנהיגה.</p>
+        <div class="spp-benefits">
+          <div class="spp-benefit">מושב מרופד ונוח במיוחד</div>
+          <div class="spp-benefit">שליטה נוחה ואינטואיטיבית</div>
+          <div class="spp-benefit">עיצוב מתקדם ומודרני</div>
         </div>
-      </section>
+        <p class="spp-price">מחיר לפי דגם</p>
+        <div class="spp-actions">
+          <a href="/contact" class="spp-btn spp-btn-consult">לקבלת ייעוץ על הדגם</a>
+          <a href="https://wa.me/972526121871" class="spp-btn spp-btn-whatsapp">שאלו אותנו בוואטסאפ</a>
+        </div>
+      </div>
+    </div>
+    <div class="spp-section"><h2>פרטי המוצר המלאים</h2><p class="spp-section-text">דגם GB149 משלב עיצוב מתקדם עם נוחות מקסימלית. המושב המרופד והבקרה הנוחה הופכים כל נסיעה לחוויה נעימה, גם לנסיעות ארוכות במהלך היום.</p></div>
+    <div class="spp-section"><h2>מפרט מלא</h2><div class="spp-spec-table"><ul>
+      <li><span>סוג:</span> קלנועית מתקפלת</li>
+      <li><span>מהירות מקסימלית:</span> 8 קמ"ש</li>
+      <li><span>טווח נסיעה:</span> עד 30 ק"מ</li>
+      <li><span>עומס מקסימלי:</span> 130 ק"ג</li>
+    </ul></div></div>
+    <div class="spp-section"><h2>אחריות</h2><p class="spp-section-text">אחריות מלאה לשנתיים על השלדה ומערכת ההנעה, כולל שירות ותמיכה טכנית זמינה.</p></div>
+  </div>
+</section>
     </main>
   
   <footer class="site-footer">

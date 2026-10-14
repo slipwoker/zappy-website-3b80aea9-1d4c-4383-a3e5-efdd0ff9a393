@@ -1975,6 +1975,18 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 .spp-spec-table ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .spp-spec-table li{padding:14px 16px;background:#f9f4f4;border-radius:10px;color:#1a1a1a}
 .spp-spec-table li span{font-weight:700;color:#9b1c1c}
+.spp-gallery{display:flex;flex-direction:column;gap:12px}
+.spp-main-image img{cursor:zoom-in}
+.spp-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.spp-thumb{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:10px;cursor:pointer;border:2px solid transparent;transition:border-color .2s ease;display:block}
+.spp-thumb.active{border-color:#9b1c1c}
+.spp-thumb-add{width:100%;aspect-ratio:4/3;border-radius:10px;border:2px dashed #d4c0c0;background:#f9f4f4;display:flex;align-items:center;justify-content:center;color:#b08a8a;font-size:.85rem;text-align:center;padding:8px}
+.spp-fit-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+.spp-fit-list li{display:flex;align-items:flex-start;gap:12px;padding:16px 18px;background:#f9f4f4;border-radius:12px;color:#1a1a1a;font-weight:600;line-height:1.6}
+.spp-fit-list li::before{content:"•";color:#c0392b;font-size:1.4rem;line-height:1.2}
+.spp-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:99999;cursor:zoom-out}
+.spp-lightbox.open{display:flex}
+.spp-lightbox img{max-width:90vw;max-height:90vh;border-radius:8px}
 .spp-specs-preview ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
 .spp-specs-preview li{color:#4b5563;font-size:.95rem}
 .spp-specs-preview li span{font-weight:700;color:#9b1c1c}
@@ -1994,7 +2006,15 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
     </nav>
     <a href="/#index-products-section" class="spp-back-link">← חזרה לכל הדגמים</a>
     <div class="spp-top">
+      <div class="spp-gallery">
       <div class="spp-main-image"><img src="/assets/site-dual-seat-scooter-1783333040005-yfrrfn.webp?v=1783333042378" alt="קלנועית זוגית C-PRO" loading="lazy" decoding="async" fetchpriority="low"></div>
+      <div class="spp-thumbs">
+        <img class="spp-thumb active" src="/assets/site-dual-seat-scooter-1783333040005-yfrrfn.webp?v=1783333042378" alt="קלנועית C-PRO" loading="lazy" decoding="async" fetchpriority="low">
+        <div class="spp-thumb-add">הוספת תמונה</div>
+        <div class="spp-thumb-add">הוספת תמונה</div>
+        <div class="spp-thumb-add">הוספת תמונה</div>
+      </div>
+    </div>
       <div class="spp-info">
         <h1 class="spp-name">C-PRO</h1>
         <p class="spp-desc">קלנועית זוגית מרווחת — חוויית נסיעה משותפת בבטיחות ונוחות מקסימלית.</p>
@@ -2010,7 +2030,12 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         </div>
       </div>
     </div>
-    <div class="spp-section"><h2>פרטי המוצר המלאים</h2><p class="spp-section-text">דגם C-PRO הוא קלנועית הזוגית המובילה שלנו, שתוכננה לזוגות ולמשפחות שרוצים לנוע יחד בנוחות ובביטחון. המושב הרחב והמרופד, מערכת הבלימה המתקדמת והמתלים הרכים מעניקים חוויית נסיעה חלקה גם בדרכים לא אחידות.</p></div>
+    <div class="spp-section"><h2>מכירים את C-PRO</h2><p class="spp-section-text">דגם C-PRO מיועד לנסיעה משותפת ומתאים לזוגות ולמשפחות. הוא מציע מושב זוגי מרווח, מערכות בטיחות מתקדמות ונוחות מקסימלית לנסיעות ארוכות. ניתן לקבל ייעוץ אישי לבדיקת התאמת הדגם לצרכים שלכם.</p></div>
+    <div class="spp-section"><h2>למי הדגם מתאים?</h2><ul class="spp-fit-list">
+      <li>[צורך או שימוש ראשון]</li>
+      <li>[צורך או שימוש שני]</li>
+      <li>[צורך או שימוש שלישי]</li>
+    </ul></div>
     <div class="spp-section"><h2>מפרט מלא</h2><div class="spp-spec-table"><ul>
       <li><span>סוג:</span> קלנועית זוגית</li>
       <li><span>משקל כולל:</span> כ-150 ק"ג</li>

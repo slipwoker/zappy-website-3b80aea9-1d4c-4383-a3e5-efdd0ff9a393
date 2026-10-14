@@ -1066,6 +1066,53 @@ window.onload = function() {
 })();
 /* ZAPPY_CUSTOM_JS_END:40448327523d */
 
+/* ZAPPY_CUSTOM_JS_START:4748f5aebd2f */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function(){
+  function setupGallery(wrap){
+    if(!wrap) return;
+    const mainImg = wrap.querySelector('.spp-main-image img');
+    const thumbs = wrap.querySelectorAll('.spp-thumb');
+    if(!mainImg) return;
+    // build lightbox once per page
+    let lb = document.getElementById('spp-lightbox');
+    if(!lb){
+      lb = document.createElement('div');
+      lb.id = 'spp-lightbox';
+      lb.className = 'spp-lightbox';
+      lb.innerHTML = '<img alt="">';
+      document.body.appendChild(lb);
+      lb.addEventListener('click', function(){ lb.classList.remove('open'); });
+    }
+    function show(src){
+      lb.querySelector('img').src = src;
+      lb.classList.add('open');
+    }
+    mainImg.addEventListener('click', function(){ show(mainImg.src); });
+    thumbs.forEach(function(t){
+      t.addEventListener('click', function(){
+        mainImg.src = t.src;
+        thumbs.forEach(function(x){ x.classList.remove('active'); });
+        t.classList.add('active');
+      });
+    });
+  }
+  document.querySelectorAll('.sams-product-page .spp-gallery').forEach(setupGallery);
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:4748f5aebd2f */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){

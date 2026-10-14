@@ -1970,6 +1970,18 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 .spp-spec-table ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .spp-spec-table li{padding:14px 16px;background:#f9f4f4;border-radius:10px;color:#1a1a1a}
 .spp-spec-table li span{font-weight:700;color:#9b1c1c}
+.spp-gallery{display:flex;flex-direction:column;gap:12px}
+.spp-main-image img{cursor:zoom-in}
+.spp-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.spp-thumb{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:10px;cursor:pointer;border:2px solid transparent;transition:border-color .2s ease;display:block}
+.spp-thumb.active{border-color:#9b1c1c}
+.spp-thumb-add{width:100%;aspect-ratio:4/3;border-radius:10px;border:2px dashed #d4c0c0;background:#f9f4f4;display:flex;align-items:center;justify-content:center;color:#b08a8a;font-size:.85rem;text-align:center;padding:8px}
+.spp-fit-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+.spp-fit-list li{display:flex;align-items:flex-start;gap:12px;padding:16px 18px;background:#f9f4f4;border-radius:12px;color:#1a1a1a;font-weight:600;line-height:1.6}
+.spp-fit-list li::before{content:"•";color:#c0392b;font-size:1.4rem;line-height:1.2}
+.spp-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:99999;cursor:zoom-out}
+.spp-lightbox.open{display:flex}
+.spp-lightbox img{max-width:90vw;max-height:90vh;border-radius:8px}
 @media(max-width:768px){.spp-top{grid-template-columns:1fr;gap:24px}.spp-name{font-size:2rem}.spp-spec-table ul{grid-template-columns:1fr}}
 </style>
 <section class="sams-product-page" dir="rtl">

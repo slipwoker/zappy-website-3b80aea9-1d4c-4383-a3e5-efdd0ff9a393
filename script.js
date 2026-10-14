@@ -1134,31 +1134,44 @@ document.addEventListener('DOMContentLoaded', function(){
 })();
 /* ZAPPY_CUSTOM_JS_END:763d56468aa5 */
 
-/* ZAPPY_CUSTOM_JS_START:defc76bc30d1 */
+/* ZAPPY_CUSTOM_JS_START:4de7f9f580f8 */
 (function () {
   function __zappyCustomInit() {
     try {
 document.addEventListener('DOMContentLoaded', function () {
-  var items = document.querySelectorAll('.spp-faq-item');
-  items.forEach(function (item) {
+  function setAnswer(item, open) {
+    var q = item.querySelector('.spp-faq-question');
+    var a = item.querySelector('.spp-faq-answer');
+    item.classList.toggle('open', open);
+    if (q) q.setAttribute('aria-expanded', String(open));
+    if (a) {
+      if (open) {
+        a.style.setProperty('display', 'block', 'important');
+        a.style.setProperty('max-height', 'none', 'important');
+        a.style.setProperty('overflow', 'visible', 'important');
+        a.style.setProperty('opacity', '1', 'important');
+        a.style.setProperty('visibility', 'visible', 'important');
+      } else {
+        a.style.setProperty('display', 'none', 'important');
+        a.style.setProperty('max-height', '0px', 'important');
+        a.style.setProperty('overflow', 'hidden', 'important');
+        a.style.setProperty('opacity', '0', 'important');
+      }
+    }
+  }
+  document.querySelectorAll('.spp-faq-item').forEach(function (item) {
     var q = item.querySelector('.spp-faq-question');
     if (!q) return;
-    q.setAttribute('aria-expanded', 'false');
+    // initial collapsed state
+    setAnswer(item, false);
     q.addEventListener('click', function () {
-      var isOpen = item.classList.contains('open');
-      // close all siblings (accordion behaviour)
       var parent = item.parentNode;
       if (parent) {
-        parent.querySelectorAll('.spp-faq-item.open').forEach(function (o) {
-          if (o !== item) {
-            o.classList.remove('open');
-            var b = o.querySelector('.spp-faq-question');
-            if (b) b.setAttribute('aria-expanded', 'false');
-          }
+        parent.querySelectorAll('.spp-faq-item').forEach(function (o) {
+          if (o !== item) setAnswer(o, false);
         });
       }
-      item.classList.toggle('open', !isOpen);
-      q.setAttribute('aria-expanded', String(!isOpen));
+      setAnswer(item, !item.classList.contains('open'));
     });
   });
 });
@@ -1172,7 +1185,7 @@ document.addEventListener('DOMContentLoaded', function () {
     __zappyCustomInit();
   }
 })();
-/* ZAPPY_CUSTOM_JS_END:defc76bc30d1 */
+/* ZAPPY_CUSTOM_JS_END:4de7f9f580f8 */
 
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */

@@ -9784,6 +9784,26 @@ html, body {
   color: #1a1a1a;
   margin: 0 0 16px;
 }
+
+.index-products-section .sams-catalog-img-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.index-products-section .sams-catalog-img-link .sams-catalog-img {
+  display: block;
+}
+
+.index-products-section .sams-catalog-model-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.index-products-section .sams-catalog-model-link:hover .sams-catalog-model {
+  color: var(--accent);
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
